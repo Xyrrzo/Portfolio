@@ -70,7 +70,6 @@
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
-      <!-- duplicate set for a seamless loop -->
       <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
       <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
       <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
@@ -552,7 +551,7 @@
   }
   typeLoop();
 
-  /* ---- scroll reveal ---- */
+  
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
@@ -588,7 +587,7 @@
     animateProf();
   }
 
-  /* ---- count-up stats (supports multiple .stats blocks) ---- */
+
   function animateStatBlock(block){
     block.querySelectorAll('.stat .num').forEach(el => {
       const target = parseInt(el.getAttribute('data-count'), 10);
@@ -614,7 +613,7 @@
     statsBlocks.forEach(animateStatBlock);
   }
 
-  /* ---- certificate lightbox ---- */
+
   function openLightbox(src){
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').classList.add('open');
