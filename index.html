@@ -567,11 +567,12 @@
   const siteNav = document.querySelector('header.nav');
   if (siteNav){
     const revealNav = () => {
-      if (window.scrollY > 40){
+      if (window.scrollY > 60){
         siteNav.classList.add('nav-visible');
-      } else {
+      } else if (window.scrollY <= 4){
         siteNav.classList.remove('nav-visible');
       }
+      // between 4 and 60px: leave the nav's current state alone (avoids flicker)
     };
     revealNav();
     window.addEventListener('scroll', revealNav, { passive: true });
