@@ -470,7 +470,7 @@
     <p class="gallery-label">// certificate photos - click to enlarge</p>
     <div class="cert-gallery">
       <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-deepfakes.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dict-2.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
+        <div class="img-wrap"><img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
         <figcaption><b>Digital Trust in the AI Era</b>DICT CALABARZON · Jul 22, 2026</figcaption>
       </figure>
       <figure class="cert-photo" onclick="openLightbox('certificates/cert-dost-i4rizal.jpg')">
@@ -562,21 +562,6 @@
     applyTheme(next);
     try { localStorage.setItem('portfolio-theme', next); } catch(e) {}
   });
-
-  /* ---- reveal navbar on scroll down ---- */
-  const siteNav = document.querySelector('header.nav');
-  if (siteNav){
-    const revealNav = () => {
-      if (window.scrollY > 60){
-        siteNav.classList.add('nav-visible');
-      } else if (window.scrollY <= 4){
-        siteNav.classList.remove('nav-visible');
-      }
-      // between 4 and 60px: leave the nav's current state alone (avoids flicker)
-    };
-    revealNav();
-    window.addEventListener('scroll', revealNav, { passive: true });
-  }
 
   /* ---- mobile nav toggle ---- */
   const navToggle = document.getElementById('navToggle');
