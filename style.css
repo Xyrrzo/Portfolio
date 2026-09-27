@@ -40,11 +40,13 @@ img{max-width:100%; display:block;}
 
 /* ---- Nav ---- */
 header.nav{
-  position:sticky; top:0; z-index:30;
+  position:fixed; top:0; left:0; right:0; z-index:30;
   background:rgba(10,15,28,.82); backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
-  transition:background .35s ease, border-color .35s ease;
+  transform:translateY(-100%);
+  transition:transform .35s ease, background .35s ease, border-color .35s ease;
 }
+header.nav.nav-visible{ transform:translateY(0); }
 :root[data-theme="light"] header.nav{background:rgba(244,246,251,.82);}
 .navbar{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; gap:16px;}
 .brand{font-family:'JetBrains Mono',monospace; font-weight:600; font-size:15px; letter-spacing:.02em;}

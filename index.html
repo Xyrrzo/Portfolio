@@ -467,7 +467,7 @@
       </div>
     </div>
 
-    <p class="gallery-label">// certificate photos </p>
+    <p class="gallery-label">// certificate photos - click to enlarge</p>
     <div class="cert-gallery">
       <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-deepfakes.jpg')">
         <div class="img-wrap"><img src="certificates/cert-dict-2.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
@@ -562,6 +562,20 @@
     applyTheme(next);
     try { localStorage.setItem('portfolio-theme', next); } catch(e) {}
   });
+
+  /* ---- reveal navbar on scroll down ---- */
+  const siteNav = document.querySelector('header.nav');
+  if (siteNav){
+    const revealNav = () => {
+      if (window.scrollY > 40){
+        siteNav.classList.add('nav-visible');
+      } else {
+        siteNav.classList.remove('nav-visible');
+      }
+    };
+    revealNav();
+    window.addEventListener('scroll', revealNav, { passive: true });
+  }
 
   /* ---- mobile nav toggle ---- */
   const navToggle = document.getElementById('navToggle');
