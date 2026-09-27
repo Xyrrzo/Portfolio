@@ -164,8 +164,8 @@
 
   <section class="wrap reveal" style="padding-top:0; border-top:none;">
     <div class="stats">
-      <div class="stat"><div class="num" data-count="9">0</div><div class="label">Tech skills</div></div>
-      <div class="stat"><div class="num" data-count="4">0</div><div class="label">Certificates earned</div></div>
+      <div class="stat"><div class="num" data-count="11">0</div><div class="label">Tech skills</div></div>
+      <div class="stat"><div class="num" data-count="6">0</div><div class="label">Certificates earned</div></div>
       <div class="stat"><div class="num" data-count="6">0</div><div class="label">Practice projects</div></div>
       <div class="stat"><div class="num" data-count="3">0</div><div class="label">Year standing</div></div>
     </div>
@@ -198,6 +198,13 @@
         <h3>DATA</h3>
         <div class="tag-row">
           <span class="tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>AI &amp; DATA SCIENCE</h3>
+        <div class="tag-row">
+          <span class="tag">Modern AI</span>
+          <span class="tag">Data Science</span>
         </div>
       </div>
     </div>
@@ -240,6 +247,14 @@
         <div class="prof-row">
           <div class="prof-top"><span>C#</span><span class="lvl">Beginner–Intermediate</span></div>
           <div class="prof-bar"><div class="prof-fill" data-level="55"></div></div>
+        </div>
+        <div class="prof-row">
+          <div class="prof-top"><span>Modern AI</span><span class="lvl">Beginner</span></div>
+          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
+        </div>
+        <div class="prof-row">
+          <div class="prof-top"><span>Data Science</span><span class="lvl">Beginner</span></div>
+          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
         </div>
       </div>
     </div>
@@ -434,6 +449,22 @@
         </div>
         <div class="cert-date">Aug 19, 2026</div>
       </div>
+      <div class="cert">
+        <div class="cert-badge">CNA</div>
+        <div>
+          <h4>Introduction to Modern AI</h4>
+          <p>Cisco Networking Academy</p>
+        </div>
+        <div class="cert-date">Sep 27, 2026</div>
+      </div>
+      <div class="cert">
+        <div class="cert-badge">CNA</div>
+        <div>
+          <h4>Introduction to Data Science</h4>
+          <p>Cisco Networking Academy</p>
+        </div>
+        <div class="cert-date">Sep 27, 2026</div>
+      </div>
     </div>
 
     <p class="gallery-label">// certificate photos - click to enlarge</p>
@@ -453,6 +484,14 @@
       <figure class="cert-photo" onclick="openLightbox('certificates/cert-digiwork-expo.jpg')">
         <div class="img-wrap"><img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026"></div>
         <figcaption><b>Isabela DigiWork eXp 2026</b>Province of Isabela · Aug 19, 2026</figcaption>
+      </figure>
+      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-modern-ai.png')">
+        <div class="img-wrap"><img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI"></div>
+        <figcaption><b>Introduction to Modern AI</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
+      </figure>
+      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-data-science.png')">
+        <div class="img-wrap"><img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science"></div>
+        <figcaption><b>Introduction to Data Science</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
       </figure>
     </div>
   </section>
@@ -544,7 +583,7 @@
   const lines = [
     'whoami\n> Gian Kristopher L. Ariola',
     'cat status.txt\n> 3rd Year, North Eastern College - Isabela',
-    'ls skills/\n> html css js php c++ c# mysql bootstrap jquery',
+    'ls skills/\n> html css js php c++ c# mysql bootstrap jquery modern-ai data-science',
     './build --project "portfolio"\n> compiling ideas...'
   ];
   const typedEl = document.getElementById('typed');
