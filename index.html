@@ -11,528 +11,573 @@
 </head>
 <body id="top">
 
-<header class="nav">
-  <div class="navbar wrap" style="padding-left:0;padding-right:0;position:relative;">
-    <div class="brand">gian<span class="dot">.</span>ariola</div>
-    <nav class="links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#passion">Passion</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#github">GitHub</a>
-      <a href="#certs">Certificates</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<!-- mobile top strip -->
+<div class="titlebar">
+  <button class="sb-toggle" id="drawerOpen" aria-label="Open explorer" style="color:var(--text); font-size:18px;">☰</button>
+  <div class="brand-m">gian<span class="dot">.</span>ariola</div>
+  <div class="titlebar-actions">
     <button class="theme-toggle" id="themeBtn" aria-label="Toggle dark and light mode">
-      <span class="knob" id="themeKnob">🌙</span>
-    </button>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
+      <span id="themeKnob">🌙</span>
     </button>
   </div>
-</header>
+</div>
 
-<main>
-  <section class="hero wrap" style="border-top:none;">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="hero-grid">
-      <div>
-        <p class="kicker">// full-stack &amp; software development</p>
-        <div class="hero-name-row">
-          <a class="gh-chip" href="#github" aria-label="Jump to GitHub section">
-            <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" class="gh-chip-avatar">
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<div class="shell">
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+      <img src="assets/avatar.jpg" alt="Gian's avatar">
+      <div class="who"><b>gian.ariola</b><span>● ready to build</span></div>
+    </div>
+
+    <p class="explorer-label">Explorer</p>
+    <ul class="explorer" id="explorerList">
+      <li><a href="#welcome" data-target="welcome"><span class="ext ext-star">★</span> Welcome</a></li>
+      <li><a href="#about" data-target="about"><span class="ext ext-md">M</span> about.md</a></li>
+      <li><a href="#passion" data-target="passion"><span class="ext ext-md">M</span> passion.md</a></li>
+      <li><a href="#skills" data-target="skills"><span class="ext ext-json">{}</span> skills.json</a></li>
+      <li><a href="#projects" data-target="projects"><span class="ext ext-md">M</span> projects.md</a></li>
+      <li><a href="#github" data-target="github"><span class="ext ext-md">M</span> github.md</a></li>
+      <li><a href="#certs" data-target="certs"><span class="ext ext-dir">▸</span> certificates/</a></li>
+      <li><a href="#contact" data-target="contact"><span class="ext ext-md">M</span> contact.md</a></li>
+    </ul>
+
+    <div class="side-foot">
+      <a href="https://github.com/SyRiola" target="_blank" rel="noopener">github.com/SyRiola ↗</a>
+      <button class="theme-toggle" id="themeBtnDesktop" aria-label="Toggle dark and light mode">
+        <span id="themeKnobDesktop">🌙</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN COLUMN ===================== -->
+  <div class="main-col">
+    <nav class="tabbar" id="tabbar" aria-label="Open files">
+      <a href="#welcome" data-target="welcome"><span class="ext ext-star">★</span>Welcome</a>
+      <a href="#about" data-target="about"><span class="ext ext-md">M</span>about.md</a>
+      <a href="#passion" data-target="passion"><span class="ext ext-md">M</span>passion.md</a>
+      <a href="#skills" data-target="skills"><span class="ext ext-json">{}</span>skills.json</a>
+      <a href="#projects" data-target="projects"><span class="ext ext-md">M</span>projects.md</a>
+      <a href="#github" data-target="github"><span class="ext ext-md">M</span>github.md</a>
+      <a href="#certs" data-target="certs"><span class="ext ext-dir">▸</span>certificates/</a>
+      <a href="#contact" data-target="contact"><span class="ext ext-md">M</span>contact.md</a>
+    </nav>
+
+    <main>
+      <!-- ===================== WELCOME / HERO ===================== -->
+      <section id="welcome" class="welcome">
+        <div class="welcome-grid">
+          <div>
+            <div class="hero-id">
+              <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola">
+            </div>
+            <h1>Gian Kristopher L. Ariola</h1>
+            <p class="lede">3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela — full-stack &amp; software development, building things with code and picking up new frameworks along the way.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projects">See my work</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="term">
+            <div class="term-bar">
+              <span class="term-dot" style="background:#ff5f57;"></span>
+              <span class="term-dot" style="background:#febc2e;"></span>
+              <span class="term-dot" style="background:#28c840;"></span>
+            </div>
+            <div class="term-body" id="termBody">
+              <div class="typeline"><span class="p">gian@nec</span><span class="c">:~$</span> <span id="typed"></span><span class="caret"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="logo-strip" aria-hidden="true">
+        <div class="logo-track">
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
+          <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
+          <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
+        </div>
+      </div>
+
+      <!-- ===================== ABOUT ===================== -->
+      <section id="about" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> about.md</p>
+        <h2>Who I am</h2>
+        <div class="about-grid">
+          <div>
+            <p>I'm a third-year student at North Eastern College in Isabela, working through coursework and side projects that mix web development with the fundamentals of programming and databases.</p>
+            <p>Along the way I've also joined ICT and cybersecurity events run by DICT, DOST, and local provincial offices — chasing topics like AI, digital trust, and workforce readiness outside the classroom.</p>
+          </div>
+          <ul class="fact-list">
+            <li><span class="k">school</span><b>North Eastern College, Isabela</b></li>
+            <li><span class="k">level</span><b>3rd Year Student</b></li>
+            <li><span class="k">focus</span><b>Web &amp; software development</b></li>
+            <li><span class="k">based_in</span><b>Isabela, Philippines</b></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="file-divider"></div>
+
+      <!-- ===================== PASSION ===================== -->
+      <section id="passion" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> passion.md</p>
+        <h2>What drives me</h2>
+        <div class="passion-grid">
+          <div>
+            <p>I like turning a vague idea into something you can actually click through — that's most of the appeal of programming for me. I'm drawn to projects that fix a specific, real annoyance: a queue that's actually fair, a records app that doesn't make a patient dig through five menus just to book a check-up.</p>
+            <p>Outside of class I keep showing up to ICT and cybersecurity talks run by DICT, DOST, and local provincial offices — not because I have to, but because I want a running sense of where the industry is heading before I graduate into it. AI, digital trust, and secure systems are the topics I keep gravitating back to.</p>
+            <p class="quote-line">Build the thing you wish already existed.</p>
+          </div>
+          <div class="dream-tags">
+            <h3>Things I'd love to build</h3>
+            <div class="tag-row">
+              <span class="tag">A service app for my hometown barangay</span>
+              <span class="tag">A contribution to an open-source security tool</span>
+              <span class="tag">My own small dev studio, someday</span>
+              <span class="tag">A mentoring track for incoming NEC students</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="career-track">
+          <h3>Career track</h3>
+          <div class="track-line">
+            <div class="track-item">
+              <div class="track-dot"></div>
+              <span class="track-stage">Now</span>
+              <h4>Student Developer</h4>
+              <p>Finishing coursework at NEC, shipping small full-stack projects, and picking up new frameworks outside of class.</p>
+            </div>
+            <div class="track-item">
+              <div class="track-dot"></div>
+              <span class="track-stage">Next</span>
+              <h4>OJT / Internship</h4>
+              <p>Looking for on-the-job training or an internship in web or software development — ideally on something real people use.</p>
+            </div>
+            <div class="track-item">
+              <div class="track-dot"></div>
+              <span class="track-stage">Then</span>
+              <h4>Junior Full-Stack Developer</h4>
+              <p>Growing into a junior dev role, ideally somewhere that also touches backend systems and security.</p>
+            </div>
+            <div class="track-item">
+              <div class="track-dot"></div>
+              <span class="track-stage">Someday</span>
+              <h4>Software Engineer &amp; Mentor</h4>
+              <p>Senior enough to design systems end-to-end, and giving back by mentoring students coming up the same way I did.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="file" style="padding-top:0; padding-bottom:40px;">
+        <div class="stats reveal">
+          <div class="stat"><div class="num" data-count="11">0</div><div class="label">Tech skills</div></div>
+          <div class="stat"><div class="num" data-count="6">0</div><div class="label">Certificates earned</div></div>
+          <div class="stat"><div class="num" data-count="6">0</div><div class="label">Practice projects</div></div>
+          <div class="stat"><div class="num" data-count="3">0</div><div class="label">Year standing</div></div>
+        </div>
+      </div>
+
+      <div class="file-divider"></div>
+
+      <!-- ===================== SKILLS ===================== -->
+      <section id="skills" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> skills.json</p>
+        <h2>What I work with</h2>
+
+        <div class="skill-groups">
+          <div class="skill-card">
+            <h3>web</h3>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>languages</h3>
+            <div class="tag-row">
+              <span class="tag">PHP</span>
+              <span class="tag">C++</span>
+              <span class="tag">C#</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>data</h3>
+            <div class="tag-row">
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>ai &amp; data science</h3>
+            <div class="tag-row">
+              <span class="tag">Modern AI</span>
+              <span class="tag">Data Science</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prof-block">
+          <h3>proficiency</h3>
+          <div class="prof-grid">
+            <div class="prof-row">
+              <div class="prof-top"><span>HTML</span><span class="lvl">Advanced</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="90"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>CSS</span><span class="lvl">Advanced</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="85"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>JavaScript</span><span class="lvl">Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>jQuery</span><span class="lvl">Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>Bootstrap</span><span class="lvl">Advanced</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="80"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>PHP</span><span class="lvl">Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>MySQL</span><span class="lvl">Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="75"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>C++</span><span class="lvl">Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>C#</span><span class="lvl">Beginner–Intermediate</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="55"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>Modern AI</span><span class="lvl">Beginner</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
+            </div>
+            <div class="prof-row">
+              <div class="prof-top"><span>Data Science</span><span class="lvl">Beginner</span></div>
+              <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="file-divider"></div>
+
+      <!-- ===================== PROJECTS ===================== -->
+      <section id="projects" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> projects.md</p>
+        <h2>Things I've built</h2>
+        <p class="sub-note">Sample placeholders below — swap in your real coursework or personal projects.</p>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-icon">🎓</div>
+            <span class="project-status">COURSEWORK PROJECT</span>
+            <h4>Campus Event Tracker</h4>
+            <p class="desc">A small web app where students browse upcoming school events and RSVP, with an admin panel to post new listings.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">📊</div>
+            <span class="project-status">PERSONAL PROJECT</span>
+            <h4>Grade Analyzer</h4>
+            <p class="desc">A C# desktop tool that computes GWA and charts grade trends per semester to help plan course loads.</p>
+            <div class="project-tags">
+              <span class="tag">C#</span><span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">📚</div>
+            <span class="project-status">COURSEWORK PROJECT</span>
+            <h4>Library Queue System</h4>
+            <p class="desc">A lightweight reservation queue for shared library computers, with live slot updates on the page.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">PHP</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">📦</div>
+            <span class="project-status">PRACTICE PROJECT</span>
+            <h4>Inventory CLI</h4>
+            <p class="desc">A console-based inventory manager built to practice data structures, file handling, and menu-driven logic.</p>
+            <div class="project-tags">
+              <span class="tag">C++</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">🗓️</div>
+            <span class="project-status">PERSONAL PROJECT</span>
+            <h4>Study Planner</h4>
+            <p class="desc">A to-do and scheduling page for organizing deadlines by subject, with local progress tracking.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">🧾</div>
+            <span class="project-status">COURSEWORK PROJECT</span>
+            <h4>Simple POS System</h4>
+            <p class="desc">A point-of-sale mockup for a school canteen stall, covering orders, receipts, and a basic sales log.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="file-divider"></div>
+
+      <!-- ===================== GITHUB ===================== -->
+      <section id="github" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> github.md</p>
+        <h2>Public repos</h2>
+        <p class="sub-note">A few things I keep pushed up to GitHub — mostly coursework, plus a couple of Flutter apps I've been iterating on between semesters.</p>
+
+        <div class="gh-profile">
+          <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" class="gh-avatar">
+          <div class="gh-profile-info">
+            <div class="gh-name">SyRiola</div>
+            <div class="gh-handle mono">@SyRiola · he/him</div>
+          </div>
+          <a class="btn btn-ghost" href="https://github.com/SyRiola" target="_blank" rel="noopener">View profile ↗</a>
+        </div>
+
+        <div class="stats" style="margin-bottom:28px;">
+          <div class="stat"><div class="num" data-count="59">0</div><div class="label">Repositories</div></div>
+          <div class="stat"><div class="num" data-count="1334574">0</div><div class="label">Follower</div></div>
+          <div class="stat"><div class="num" data-count="13">0</div><div class="label">Following</div></div>
+          <div class="stat"><div class="num" data-count="3668">0</div><div class="label">Contributions</div></div>
+        </div>
+
+        <div class="repo-grid">
+          <a class="repo-card" href="https://github.com/SyRiola/mvc_hotel" target="_blank" rel="noopener">
+            <div class="repo-top">
+              <span class="repo-icon">⌥</span>
+              <span class="repo-name">mvc_hotel</span>
+              <span class="repo-visibility">Public</span>
+            </div>
+            <p class="repo-desc">A hotel reservation and management framework built with the MVC pattern for our Web Development, Database Management, and Networking finals — handles room bookings, guest check-in/out, staff accounts, and a billing module with receipt generation.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""> PHP</span>
+              <span class="repo-star">★ 24564</span>
+              <span class="repo-updated">Updated 3 months ago</span>
+            </div>
           </a>
-          <h1>Gian Kristopher L. Ariola</h1>
+          <a class="repo-card" href="https://github.com/SyRiola/CIT-web-Development-" target="_blank" rel="noopener">
+            <div class="repo-top">
+              <span class="repo-icon">⌥</span>
+              <span class="repo-name">CIT-web-Development-</span>
+              <span class="repo-visibility">Public</span>
+            </div>
+            <p class="repo-desc">Repository of layout and styling exercises from the CIT Web Development course — responsive grids, flexbox layouts, and a handful of themed landing page mockups built while learning the fundamentals.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""> CSS</span>
+              <span class="repo-star">★ 175686</span>
+              <span class="repo-updated">Updated 5 months ago</span>
+            </div>
+          </a>
+          <a class="repo-card" href="https://github.com/SyRiola/Food-app" target="_blank" rel="noopener">
+            <div class="repo-top">
+              <span class="repo-icon">⌥</span>
+              <span class="repo-name">Food-app</span>
+              <span class="repo-visibility">Public</span>
+            </div>
+            <p class="repo-desc">A Flutter food ordering app with a browsable menu, cart and checkout flow, and order-status tracking — built to get more comfortable with state management and hooking a front end up to an API.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
+              <span class="repo-star">★ 25678</span>
+              <span class="repo-updated">Updated 1 month ago</span>
+            </div>
+          </a>
+          <a class="repo-card" href="https://github.com/SyRiola/MedicAppV2" target="_blank" rel="noopener">
+            <div class="repo-top">
+              <span class="repo-icon">⌥</span>
+              <span class="repo-name">MedicAppV2</span>
+              <span class="repo-visibility">Public</span>
+            </div>
+            <p class="repo-desc">Second version of a Flutter medical app for patients of all ages — appointment booking, medicine reminders, and a simple patient records view, with a redesigned onboarding flow over the first draft.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
+              <span class="repo-star">★ 36578</span>
+              <span class="repo-updated">Updated 2 weeks ago</span>
+            </div>
+          </a>
+          <a class="repo-card" href="https://github.com/SyRiola/medic-app-v3" target="_blank" rel="noopener">
+            <div class="repo-top">
+              <span class="repo-icon">⌥</span>
+              <span class="repo-name">medic-app-v3</span>
+              <span class="repo-visibility">Public</span>
+            </div>
+            <p class="repo-desc">Latest iteration of the medical app, rebuilt with a cleaner UI, offline-friendly local storage, and smoother appointment-scheduling logic — an ongoing side project between semesters.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
+              <span class="repo-star">★ 15678</span>
+              <span class="repo-updated">Updated this week</span>
+            </div>
+          </a>
         </div>
-        <p class="lede">3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela - building things with code and picking up new frameworks along the way.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#projects">See my work</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="term">
-        <div class="term-bar">
-          <span class="term-dot" style="background:#ff5f57;"></span>
-          <span class="term-dot" style="background:#febc2e;"></span>
-          <span class="term-dot" style="background:#28c840;"></span>
-        </div>
-        <div class="term-body" id="termBody">
-          <div class="typeline"><span class="p">gian@nec</span><span class="c">:~$</span> <span id="typed"></span><span class="caret"></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <div class="logo-marquee" aria-hidden="true">
-    <div class="logo-track">
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
-      <!-- duplicate set for a seamless loop -->
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
-    </div>
+      <div class="file-divider"></div>
+
+      <!-- ===================== CERTIFICATES ===================== -->
+      <section id="certs" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> certificates <span class="sep">/</span></p>
+        <h2>Trainings &amp; participation</h2>
+
+        <div class="cert-list">
+          <div class="cert">
+            <div class="cert-badge">DICT</div>
+            <div>
+              <h4>Digital Trust in the AI Era: Detecting Deepfakes &amp; Strengthening Cybersecurity</h4>
+              <p>Department of Information and Communications Technology — CALABARZON Regional Office</p>
+            </div>
+            <div class="cert-date">Jul 22, 2026</div>
+          </div>
+          <div class="cert">
+            <div class="cert-badge">i4R</div>
+            <div>
+              <h4>i4Rizal Episode 1: Pro Ads &amp; Precision Reach — Mastering AI Design and Targeting</h4>
+              <p>Department of Science and Technology — Rizal, via Zoom</p>
+            </div>
+            <div class="cert-date">Jul 8, 2026</div>
+          </div>
+          <div class="cert">
+            <div class="cert-badge">DICT</div>
+            <div>
+              <h4>National Disaster Resilience Month 2026 Webinar Series — Build Back Better: Practical Implementation</h4>
+              <p>Department of Information and Communications Technology — Region IV-A</p>
+            </div>
+            <div class="cert-date">Jul 28, 2026</div>
+          </div>
+          <div class="cert">
+            <div class="cert-badge">DWX</div>
+            <div>
+              <h4>Isabela DigiWork eXp 2026 — Digital Careers &amp; Workforce Competitiveness Expositions</h4>
+              <p>Province of Isabela, Philippine ICT Innovation Network &amp; partners</p>
+            </div>
+            <div class="cert-date">Aug 19, 2026</div>
+          </div>
+          <div class="cert">
+            <div class="cert-badge">CNA</div>
+            <div>
+              <h4>Introduction to Modern AI</h4>
+              <p>Cisco Networking Academy</p>
+            </div>
+            <div class="cert-date">Sep 27, 2026</div>
+          </div>
+          <div class="cert">
+            <div class="cert-badge">CNA</div>
+            <div>
+              <h4>Introduction to Data Science</h4>
+              <p>Cisco Networking Academy</p>
+            </div>
+            <div class="cert-date">Sep 27, 2026</div>
+          </div>
+        </div>
+
+        <p class="gallery-label">// certificate photos - click to enlarge</p>
+        <div class="cert-gallery">
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-deepfakes.jpg')">
+            <div class="img-wrap"><img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
+            <figcaption><b>Digital Trust in the AI Era</b>DICT CALABARZON · Jul 22, 2026</figcaption>
+          </figure>
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-dost-i4rizal.jpg')">
+            <div class="img-wrap"><img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1"></div>
+            <figcaption><b>i4Rizal Episode 1</b>DOST Rizal · Jul 8, 2026</figcaption>
+          </figure>
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-disaster-resilience.jpg')">
+            <div class="img-wrap"><img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026"></div>
+            <figcaption><b>Disaster Resilience Month 2026</b>DICT Region IV-A · Jul 28, 2026</figcaption>
+          </figure>
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-digiwork-expo.jpg')">
+            <div class="img-wrap"><img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026"></div>
+            <figcaption><b>Isabela DigiWork eXp 2026</b>Province of Isabela · Aug 19, 2026</figcaption>
+          </figure>
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-modern-ai.png')">
+            <div class="img-wrap"><img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI"></div>
+            <figcaption><b>Introduction to Modern AI</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
+          </figure>
+          <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-data-science.png')">
+            <div class="img-wrap"><img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science"></div>
+            <figcaption><b>Introduction to Data Science</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="file-divider"></div>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section id="contact" class="file reveal">
+        <p class="file-path">portfolio <span class="sep">/</span> contact.md</p>
+        <h2>Let's connect</h2>
+        <div class="contact-box">
+          <p>Open to on-the-job training, internship, and student developer opportunities around web and software development.</p>
+          <a class="btn btn-primary" href="mailto:hello@example.com">Email me</a>
+        </div>
+      </section>
+
+      <div class="eof">
+        <div class="eof-grid">
+          <span>© 2026 Gian Kristopher L. Ariola · North Eastern College, Isabela</span>
+          <div class="eof-links">
+            <a href="https://github.com/SyRiola" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="mailto:hello@example.com">Email</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
+</div>
 
-  <section id="about" class="wrap reveal">
-    <p class="eyebrow">01 - about</p>
-    <h2>Who I am</h2>
-    <div class="about-grid">
-      <div>
-        <p>I'm a third-year student at North Eastern College in Isabela, working through coursework and side projects that mix web development with the fundamentals of programming and databases.</p>
-        <p>Along the way I've also joined ICT and cybersecurity events run by DICT, DOST, and local provincial offices - chasing topics like AI, digital trust, and workforce readiness outside the classroom.</p>
-      </div>
-      <ul class="fact-list">
-        <li><span class="k">School</span><b>North Eastern College, Isabela</b></li>
-        <li><span class="k">Level</span><b>3rd Year Student</b></li>
-        <li><span class="k">Focus</span><b>Web &amp; software development</b></li>
-        <li><span class="k">Based in</span><b>Isabela, Philippines</b></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="passion" class="wrap reveal">
-    <p class="eyebrow">02 - passion &amp; dreams</p>
-    <h2>What drives me</h2>
-    <div class="passion-grid">
-      <div class="passion-text">
-        <p>I like turning a vague idea into something you can actually click through - that's most of the appeal of programming for me. I'm drawn to projects that fix a specific, real annoyance: a queue that's actually fair, a records app that doesn't make a patient dig through five menus just to book a check-up.</p>
-        <p>Outside of class I keep showing up to ICT and cybersecurity talks run by DICT, DOST, and local provincial offices - not because I have to, but because I want a running sense of where the industry is heading before I graduate into it. AI, digital trust, and secure systems are the topics I keep gravitating back to.</p>
-        <div class="quote-card">"Build the thing you wish already existed."</div>
-      </div>
-      <div class="dream-tags">
-        <h3>Things I'd love to build</h3>
-        <div class="tag-row">
-          <span class="tag">A service app for my hometown barangay</span>
-          <span class="tag">A contribution to an open-source security tool</span>
-          <span class="tag">My own small dev studio, someday</span>
-          <span class="tag">A mentoring track for incoming NEC students</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="career-track">
-      <h3>Career track</h3>
-      <div class="track-line">
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Now</span>
-          <h4>Student Developer</h4>
-          <p>Finishing coursework at NEC, shipping small full-stack projects, and picking up new frameworks outside of class.</p>
-        </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Next</span>
-          <h4>OJT / Internship</h4>
-          <p>Looking for on-the-job training or an internship in web or software development - ideally on something real people use.</p>
-        </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Then</span>
-          <h4>Junior Full-Stack Developer</h4>
-          <p>Growing into a junior dev role, ideally somewhere that also touches backend systems and security.</p>
-        </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Someday</span>
-          <h4>Software Engineer &amp; Mentor</h4>
-          <p>Senior enough to design systems end-to-end, and giving back by mentoring students coming up the same way I did.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap reveal" style="padding-top:0; border-top:none;">
-    <div class="stats">
-      <div class="stat"><div class="num" data-count="11">0</div><div class="label">Tech skills</div></div>
-      <div class="stat"><div class="num" data-count="6">0</div><div class="label">Certificates earned</div></div>
-      <div class="stat"><div class="num" data-count="6">0</div><div class="label">Practice projects</div></div>
-      <div class="stat"><div class="num" data-count="3">0</div><div class="label">Year standing</div></div>
-    </div>
-  </section>
-
-  <section id="skills" class="wrap reveal">
-    <p class="eyebrow">03 - skills</p>
-    <h2>What I work with</h2>
-
-    <div class="skill-groups">
-      <div class="skill-card">
-        <h3>WEB</h3>
-        <div class="tag-row">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">jQuery</span>
-          <span class="tag">Bootstrap</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>LANGUAGES</h3>
-        <div class="tag-row">
-          <span class="tag">PHP</span>
-          <span class="tag">C++</span>
-          <span class="tag">C#</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>DATA</h3>
-        <div class="tag-row">
-          <span class="tag">MySQL</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>AI &amp; DATA SCIENCE</h3>
-        <div class="tag-row">
-          <span class="tag">Modern AI</span>
-          <span class="tag">Data Science</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="prof-block">
-      <h3>proficiency</h3>
-      <div class="prof-grid">
-        <div class="prof-row">
-          <div class="prof-top"><span>HTML</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="90"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>CSS</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="85"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>JavaScript</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>jQuery</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Bootstrap</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="80"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>PHP</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>MySQL</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="75"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>C++</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>C#</span><span class="lvl">Beginner–Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="55"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Modern AI</span><span class="lvl">Beginner</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Data Science</span><span class="lvl">Beginner</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="wrap reveal">
-    <p class="eyebrow">04 - projects</p>
-    <h2>Things I've built</h2>
-    <p style="color:var(--muted); font-size:13.5px; margin-top:-10px;"></p>
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="project-icon">🎓</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Campus Event Tracker</h4>
-        <p class="desc">A small web app where students browse upcoming school events and RSVP, with an admin panel to post new listings.</p>
-        <div class="project-tags">
-          <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">📊</div>
-        <span class="project-status">PERSONAL PROJECT</span>
-        <h4>Grade Analyzer</h4>
-        <p class="desc">A C# desktop tool that computes GWA and charts grade trends per semester to help plan course loads.</p>
-        <div class="project-tags">
-          <span class="tag">C#</span><span class="tag">MySQL</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">📚</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Library Queue System</h4>
-        <p class="desc">A lightweight reservation queue for shared library computers, with live slot updates on the page.</p>
-        <div class="project-tags">
-          <span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">PHP</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">📦</div>
-        <span class="project-status">PRACTICE PROJECT</span>
-        <h4>Inventory CLI</h4>
-        <p class="desc">A console-based inventory manager built to practice data structures, file handling, and menu-driven logic.</p>
-        <div class="project-tags">
-          <span class="tag">C++</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🗓️</div>
-        <span class="project-status">PERSONAL PROJECT</span>
-        <h4>Study Planner</h4>
-        <p class="desc">A to-do and scheduling page for organizing deadlines by subject, with local progress tracking.</p>
-        <div class="project-tags">
-          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🧾</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Simple POS System</h4>
-        <p class="desc">A point-of-sale mockup for a school canteen stall, covering orders, receipts, and a basic sales log.</p>
-        <div class="project-tags">
-          <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="github" class="wrap reveal">
-    <p class="eyebrow">05 - github</p>
-    <h2>Public repos</h2>
-    <p style="color:var(--muted); font-size:13.5px; margin-top:-10px; margin-bottom:26px;">A few things I keep pushed up to GitHub - mostly coursework, plus a couple of Flutter apps I've been iterating on between semesters.</p>
-
-    <div class="gh-profile">
-      <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" class="gh-avatar">
-      <div class="gh-profile-info">
-        <div class="gh-name">SyRiola</div>
-        <div class="gh-handle mono">@SyRiola · he/him</div>
-      </div>
-      <a class="btn btn-ghost gh-link" href="https://github.com/SyRiola" target="_blank" rel="noopener">View profile ↗</a>
-    </div>
-
-    <div class="stats" style="margin-bottom:32px;">
-      <div class="stat"><div class="num" data-count="59">0</div><div class="label">Repositories</div></div>
-      <div class="stat"><div class="num" data-count="1334574">0</div><div class="label">Follower</div></div>
-      <div class="stat"><div class="num" data-count="13">0</div><div class="label">Following</div></div>
-      <div class="stat"><div class="num" data-count="3668">0</div><div class="label">Contributions</div></div>
-    </div>
-
-    <div class="repo-grid">
-      <a class="repo-card" href="https://github.com/SyRiola/mvc_hotel" target="_blank" rel="noopener">
-        <div class="repo-top">
-          <span class="repo-icon">⌥</span>
-          <span class="repo-name">mvc_hotel</span>
-          <span class="repo-visibility">Public</span>
-        </div>
-        <p class="repo-desc">A hotel reservation and management framework built with the MVC pattern for our Web Development, Database Management, and Networking finals - handles room bookings, guest check-in/out, staff accounts, and a billing module with receipt generation.</p>
-        <div class="repo-meta">
-          <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""> PHP</span>
-          <span class="repo-star">★ 24564</span>
-          <span class="repo-updated">Updated 3 months ago</span>
-        </div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/CIT-web-Development-" target="_blank" rel="noopener">
-        <div class="repo-top">
-          <span class="repo-icon">⌥</span>
-          <span class="repo-name">CIT-web-Development-</span>
-          <span class="repo-visibility">Public</span>
-        </div>
-        <p class="repo-desc">Repository of layout and styling exercises from the CIT Web Development course - responsive grids, flexbox layouts, and a handful of themed landing page mockups built while learning the fundamentals.</p>
-        <div class="repo-meta">
-          <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""> CSS</span>
-          <span class="repo-star">★ 175686</span>
-          <span class="repo-updated">Updated 5 months ago</span>
-        </div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/Food-app" target="_blank" rel="noopener">
-        <div class="repo-top">
-          <span class="repo-icon">⌥</span>
-          <span class="repo-name">Food-app</span>
-          <span class="repo-visibility">Public</span>
-        </div>
-        <p class="repo-desc">A Flutter food ordering app with a browsable menu, cart and checkout flow, and order-status tracking - built to get more comfortable with state management and hooking a front end up to an API.</p>
-        <div class="repo-meta">
-          <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
-          <span class="repo-star">★ 25678</span>
-          <span class="repo-updated">Updated 1 month ago</span>
-        </div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/MedicAppV2" target="_blank" rel="noopener">
-        <div class="repo-top">
-          <span class="repo-icon">⌥</span>
-          <span class="repo-name">MedicAppV2</span>
-          <span class="repo-visibility">Public</span>
-        </div>
-        <p class="repo-desc">Second version of a Flutter medical app for patients of all ages - appointment booking, medicine reminders, and a simple patient records view, with a redesigned onboarding flow over the first draft.</p>
-        <div class="repo-meta">
-          <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
-          <span class="repo-star">★ 36578</span>
-          <span class="repo-updated">Updated 2 weeks ago</span>
-        </div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/medic-app-v3" target="_blank" rel="noopener">
-        <div class="repo-top">
-          <span class="repo-icon">⌥</span>
-          <span class="repo-name">medic-app-v3</span>
-          <span class="repo-visibility">Public</span>
-        </div>
-        <p class="repo-desc">Latest iteration of the medical app, rebuilt with a cleaner UI, offline-friendly local storage, and smoother appointment-scheduling logic - an ongoing side project between semesters.</p>
-        <div class="repo-meta">
-          <span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span>
-          <span class="repo-star">★ 15678</span>
-          <span class="repo-updated">Updated this week</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <section id="certs" class="wrap reveal">
-    <p class="eyebrow">06 - certificates</p>
-    <h2>Trainings &amp; participation</h2>
-
-    <div class="cert-list">
-      <div class="cert">
-        <div class="cert-badge">DICT</div>
-        <div>
-          <h4>Digital Trust in the AI Era: Detecting Deepfakes &amp; Strengthening Cybersecurity</h4>
-          <p>Department of Information and Communications Technology - CALABARZON Regional Office</p>
-        </div>
-        <div class="cert-date">Jul 22, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">i4R</div>
-        <div>
-          <h4>i4Rizal Episode 1: Pro Ads &amp; Precision Reach - Mastering AI Design and Targeting</h4>
-          <p>Department of Science and Technology - Rizal, via Zoom</p>
-        </div>
-        <div class="cert-date">Jul 8, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">DICT</div>
-        <div>
-          <h4>National Disaster Resilience Month 2026 Webinar Series - Build Back Better: Practical Implementation</h4>
-          <p>Department of Information and Communications Technology - Region IV-A</p>
-        </div>
-        <div class="cert-date">Jul 28, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">DWX</div>
-        <div>
-          <h4>Isabela DigiWork eXp 2026 - Digital Careers &amp; Workforce Competitiveness Expositions</h4>
-          <p>Province of Isabela, Philippine ICT Innovation Network &amp; partners</p>
-        </div>
-        <div class="cert-date">Aug 19, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">CNA</div>
-        <div>
-          <h4>Introduction to Modern AI</h4>
-          <p>Cisco Networking Academy</p>
-        </div>
-        <div class="cert-date">Sep 27, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">CNA</div>
-        <div>
-          <h4>Introduction to Data Science</h4>
-          <p>Cisco Networking Academy</p>
-        </div>
-        <div class="cert-date">Sep 27, 2026</div>
-      </div>
-    </div>
-
-    <p class="gallery-label">// certificate photos - click to enlarge</p>
-    <div class="cert-gallery">
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-2.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dict-2.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
-        <figcaption><b>Digital Trust in the AI Era</b>DICT CALABARZON · Jul 22, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dost-i4rizal.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1"></div>
-        <figcaption><b>i4Rizal Episode 1</b>DOST Rizal · Jul 8, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-disaster-resilience.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026"></div>
-        <figcaption><b>Disaster Resilience Month 2026</b>DICT Region IV-A · Jul 28, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-digiwork-expo.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026"></div>
-        <figcaption><b>Isabela DigiWork eXp 2026</b>Province of Isabela · Aug 19, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-modern-ai.png')">
-        <div class="img-wrap"><img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI"></div>
-        <figcaption><b>Introduction to Modern AI</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-data-science.png')">
-        <div class="img-wrap"><img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science"></div>
-        <figcaption><b>Introduction to Data Science</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section id="contact" class="wrap reveal">
-    <p class="eyebrow">07 - contact</p>
-    <h2>Let's connect</h2>
-    <div class="contact-box">
-      <p>Open to on-the-job training, internship, and student developer opportunities around web and software development.</p>
-      <a class="btn btn-primary" href="mailto:hello@example.com">Email me</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap footer-grid">
-    <div class="footer-col footer-brand">
-      <div class="brand">gian<span class="dot">.</span>ariola</div>
-      <p>3rd year IT/CS student at North Eastern College, Isabela - building things with code and picking up new frameworks along the way.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Sitemap</h4>
-      <a href="#about">About</a>
-      <a href="#passion">Passion</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#github">GitHub</a>
-      <a href="#certs">Certificates</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Elsewhere</h4>
-      <a href="https://github.com/SyRiola" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="mailto:hello@example.com">Email me</a>
-    </div>
+<!-- ===================== STATUS BAR ===================== -->
+<div class="statusbar">
+  <div class="sb-left">
+    <span>⌥ main</span>
+    <span>✓ no problems</span>
   </div>
-  <div class="wrap footer-bottom">
-    <span>© 2026 Gian Kristopher L. Ariola · North Eastern College, Isabela</span>
-    <a href="#top">Back to top ↑</a>
+  <div class="sb-right">
+    <span id="sbFile">welcome</span>
+    <span>UTF-8</span>
+    <span>Spaces: 2</span>
   </div>
-</footer>
+</div>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
@@ -540,14 +585,12 @@
 </div>
 
 <script>
-  /* ---- theme toggle, remembers choice ---- */
-  const themeBtn = document.getElementById('themeBtn');
-  const themeKnob = document.getElementById('themeKnob');
+  /* ---- theme toggle, remembers choice, mirrors two buttons ---- */
   const root = document.documentElement;
-
+  const knobs = [document.getElementById('themeKnob'), document.getElementById('themeKnobDesktop')].filter(Boolean);
   function applyTheme(mode){
     root.setAttribute('data-theme', mode);
-    themeKnob.textContent = mode === 'light' ? '☀️' : '🌙';
+    knobs.forEach(k => k.textContent = mode === 'light' ? '☀️' : '🌙');
   }
   let savedTheme = null;
   try { savedTheme = localStorage.getItem('portfolio-theme'); } catch(e) {}
@@ -557,27 +600,25 @@
     const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
     applyTheme(prefersLight ? 'light' : 'dark');
   }
-  themeBtn.addEventListener('click', () => {
+  function toggleTheme(){
     const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     applyTheme(next);
     try { localStorage.setItem('portfolio-theme', next); } catch(e) {}
+  }
+  ['themeBtn','themeBtnDesktop'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('click', toggleTheme);
   });
 
-  /* ---- mobile nav toggle ---- */
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (navToggle && navLinks){
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
+  /* ---- mobile explorer drawer ---- */
+  const sidebar = document.getElementById('sidebar');
+  const drawerOpen = document.getElementById('drawerOpen');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+  function openDrawer(){ sidebar.classList.add('drawer-open'); drawerBackdrop.classList.add('open'); }
+  function closeDrawer(){ sidebar.classList.remove('drawer-open'); drawerBackdrop.classList.remove('open'); }
+  if (drawerOpen) drawerOpen.addEventListener('click', openDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.explorer a').forEach(a => a.addEventListener('click', closeDrawer));
 
   /* ---- terminal typing effect, cycles through a few lines ---- */
   const lines = [
@@ -588,28 +629,18 @@
   ];
   const typedEl = document.getElementById('typed');
   let lineIndex = 0, charIndex = 0, deleting = false;
-
   function typeLoop(){
     const full = lines[lineIndex];
     if (!deleting){
       charIndex++;
       typedEl.textContent = full.slice(0, charIndex);
-      if (charIndex === full.length){
-        deleting = true;
-        setTimeout(typeLoop, 1600);
-        return;
-      }
+      if (charIndex === full.length){ deleting = true; setTimeout(typeLoop, 1600); return; }
       setTimeout(typeLoop, 26);
     } else {
       charIndex -= 3;
       if (charIndex < 0) charIndex = 0;
       typedEl.textContent = full.slice(0, charIndex);
-      if (charIndex === 0){
-        deleting = false;
-        lineIndex = (lineIndex + 1) % lines.length;
-        setTimeout(typeLoop, 300);
-        return;
-      }
+      if (charIndex === 0){ deleting = false; lineIndex = (lineIndex + 1) % lines.length; setTimeout(typeLoop, 300); return; }
       setTimeout(typeLoop, 12);
     }
   }
@@ -620,10 +651,7 @@
   if ('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
+        if (entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); }
       });
     }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
@@ -647,11 +675,9 @@
       entries.forEach(entry => { if (entry.isIntersecting) { animateProf(); profIo.disconnect(); } });
     }, { threshold: 0.2 });
     profIo.observe(profSection);
-  } else {
-    animateProf();
-  }
+  } else { animateProf(); }
 
-  /* ---- count-up stats (supports multiple .stats blocks) ---- */
+  /* ---- count-up stats ---- */
   function animateStatBlock(block){
     block.querySelectorAll('.stat .num').forEach(el => {
       const target = parseInt(el.getAttribute('data-count'), 10);
@@ -673,9 +699,7 @@
       }, { threshold: 0.3 });
       statsIo.observe(block);
     });
-  } else {
-    statsBlocks.forEach(animateStatBlock);
-  }
+  } else { statsBlocks.forEach(animateStatBlock); }
 
   /* ---- certificate lightbox ---- */
   function openLightbox(src){
@@ -685,6 +709,29 @@
   function closeLightbox(e){
     document.getElementById('lightbox').classList.remove('open');
   }
+
+  /* ---- scroll-spy: sync sidebar + tab bar + status bar to visible section ---- */
+  const spyTargets = ['welcome','about','passion','skills','projects','github','certs','contact'];
+  const spyNames = {welcome:'welcome', about:'about.md', passion:'passion.md', skills:'skills.json', projects:'projects.md', github:'github.md', certs:'certificates/', contact:'contact.md'};
+  const spySections = spyTargets.map(id => document.getElementById(id)).filter(Boolean);
+  const sbFile = document.getElementById('sbFile');
+
+  function setActive(id){
+    document.querySelectorAll('.explorer a, .tabbar a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-target') === id);
+    });
+    if (sbFile) sbFile.textContent = spyNames[id] || id;
+  }
+
+  if ('IntersectionObserver' in window){
+    const spyIo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    spySections.forEach(sec => spyIo.observe(sec));
+  }
+  setActive('welcome');
 </script>
 </body>
 </html>
