@@ -117,7 +117,10 @@ img{max-width:100%; display:block;}
 .hero-id .status{font-size:12.5px; color:var(--good); font-weight:600;}
 .hero h1{margin:0 0 16px; font-size:clamp(34px,4.8vw,54px); line-height:1.07; font-weight:800; letter-spacing:-.02em; color:var(--text-bright);}
 .hero .lede{font-size:16.5px; color:var(--muted); max-width:52ch; margin:0 0 28px;}
-.cta-row{display:flex; gap:12px; flex-wrap:wrap;}
+.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:30px;}
+.hero-stats{display:flex; gap:28px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:22px;}
+.hero-stats .hs-num{font-size:22px; font-weight:800; background:linear-gradient(135deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.hero-stats .hs-label{font-size:11.5px; color:var(--muted); font-weight:600; margin-top:2px;}
 .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:999px; font-size:14px; font-weight:700; border:1px solid transparent; cursor:pointer;}
 .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff;}
 .btn-primary:hover{filter:brightness(1.08);}
@@ -171,13 +174,19 @@ section.block{padding:72px 0;}
 .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
 .tag{font-size:12.5px; padding:7px 13px; border:1px solid var(--line); border-radius:999px; background:var(--panel); color:var(--text);}
 
-.career-track h3{margin:0 0 20px; font-size:13px; color:var(--muted); font-weight:700;}
-.track-line{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-.track-item{border-left:2px solid var(--line); padding-left:16px; position:relative;}
-.track-dot{position:absolute; left:-6px; top:2px; width:10px; height:10px; border-radius:50%; background:var(--bg); border:2px solid var(--accent);}
-.track-stage{display:block; font-size:11px; color:var(--accent-2); font-weight:700; letter-spacing:.03em; margin-bottom:5px; text-transform:uppercase;}
-.track-item h4{margin:0 0 6px; font-size:14.5px; color:var(--text-bright);}
-.track-item p{font-size:12.8px; color:var(--muted); margin:0;}
+.career-track h3{margin:0 0 22px; font-size:13px; color:var(--muted); font-weight:700;}
+.track-line{display:flex; flex-direction:column; gap:28px; position:relative; padding-left:24px; border-left:2px solid var(--line);}
+.track-item{position:relative;}
+.track-dot{position:absolute; left:-31px; top:2px; width:12px; height:12px; border-radius:50%; background:var(--bg); border:2px solid var(--accent);}
+.track-stage{display:inline-block; font-size:11px; color:var(--accent-2); font-weight:700; letter-spacing:.03em; margin-bottom:5px; text-transform:uppercase;}
+.track-item h4{margin:0 0 6px; font-size:15.5px; color:var(--text-bright);}
+.track-item p{font-size:13px; color:var(--muted); margin:0; max-width:56ch;}
+
+/* ---- Work section: projects + repos grouped under subheads ---- */
+.work-sub{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 20px;}
+.work-sub:not(:first-child){margin-top:48px;}
+.work-sub h3{margin:0; font-size:17px; font-weight:800; color:var(--text-bright);}
+.work-sub .count{font-size:12px; color:var(--muted); font-weight:600;}
 
 /* stats */
 .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
