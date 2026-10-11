@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
+<button class="totop" id="toTop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<nav class="dots" id="dots" aria-label="Sections"></nav>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -60,6 +62,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero-glow" aria-hidden="true"></div>
+    <canvas class="hero-fx" id="fx" aria-hidden="true"></canvas>
+    <span class="orb o1" aria-hidden="true"></span><span class="orb o2" aria-hidden="true"></span>
     <div class="wrap hero-grid">
       <div>
         <p class="status rise-in" style="--d:0ms">
@@ -67,6 +71,7 @@
           <span class="status-text">Open to OJT and internships</span>
         </p>
         <h1><span class="line" style="--n:0"><span>Gian</span></span> <span class="line" style="--n:1"><span>Kristopher</span></span> <span class="line" style="--n:2"><span>L. Ariola</span></span></h1>
+        <p class="role rise-in" style="--d:520ms" aria-label="I build web apps, mobile apps and systems"><span id="typed"></span><i class="caret"></i></p>
         <p class="lede rise-in" style="--d:620ms">I'm a 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. I build websites and apps, and I've trained to set up and maintain the computers, networks and servers they run on.</p>
         <div class="cta-row rise-in" style="--d:760ms">
           <a class="btn btn-signal" href="#work">See my work</a>
@@ -89,6 +94,7 @@
         </figcaption>
       </figure>
     </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
   </section>
 
 
@@ -108,6 +114,38 @@
         <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">GitHub</span>
     </div>
   </div>
+
+  <!-- ============ AT A GLANCE ============ -->
+  <section class="section glance" id="glance">
+    <div class="wrap glance-grid">
+      <div class="fx-rise">
+        <span class="eyebrow">At a glance</span>
+        <h2>The quick version</h2>
+        <dl class="g-stats">
+          <div><dd data-n="11">0</dd><dt>Certificates earned</dt></div>
+          <div><dd data-n="5">0</dd><dt>TESDA-certified courses</dt></div>
+          <div><dd data-n="3">0</dd><dt>Flutter apps built</dt></div>
+          <div><dd data-n="12">0</dd><dt>Technologies used</dt></div>
+        </dl>
+      </div>
+      <div class="term fx-rise" id="term" role="img" aria-label="Terminal summary: Gian Kristopher L. Ariola, 3rd year IT/CS student at North Eastern College, Isabela, open to OJT, currently building medic-app-v3 in Flutter.">
+        <div class="term-bar"><i></i><i></i><i></i><span>gian@portfolio ~ whoami</span></div>
+        <div class="term-body" aria-hidden="true">
+          <span class="tl" style="--t:0"><span class="p">$</span> whoami</span>
+          <span class="tl" style="--t:1"><span class="v">Gian Kristopher L. Ariola</span></span>
+          <span class="tl" style="--t:2"><span class="p">$</span> cat profile.txt</span>
+          <span class="tl" style="--t:3"><span class="k">school</span>   North Eastern College, Isabela</span>
+          <span class="tl" style="--t:4"><span class="k">level</span>    3rd year BS IT / CS</span>
+          <span class="tl" style="--t:5"><span class="k">stack</span>    HTML, CSS, JS, PHP, C#, C++, MySQL, Flutter</span>
+          <span class="tl" style="--t:6"><span class="k">certified</span> TESDA, Computer Systems Servicing</span>
+          <span class="tl" style="--t:7"><span class="p">$</span> git log -1 --oneline</span>
+          <span class="tl" style="--t:8"><span class="v">medic-app-v3</span>: cleaner UI, offline storage</span>
+          <span class="tl" style="--t:9"><span class="p">$</span> status</span>
+          <span class="tl" style="--t:10"><span class="v">open to OJT and internships</span><i class="caret"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ SKILLS ============ -->
   <section id="skills" class="section">
@@ -501,7 +539,7 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="section contact">
     <div class="wrap">
-      <h2>Looking for an OJT or internship</h2>
+      <h2>Looking for an <em>OJT or internship</em></h2>
       <p>Open to on-the-job training, internship, and student developer opportunities around web and software development.</p>
       <div class="cta-row">
         <a class="btn btn-signal" href="mailto:hello@example.com">Email me</a>
@@ -751,6 +789,64 @@
     var dx = e.changedTouches[0].clientX - sx; sx = null;
     if(Math.abs(dx) > 50){ show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); }
   }, {passive:true});
+})();
+</script>
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var hero=$('#hero');
+
+  /* typewriter role line */
+  var typed=$('#typed'), words=['websites that feel good to use.','mobile apps in Flutter.','systems from the server up.','things I wish already existed.'];
+  if(reduce){typed.textContent=words[0];}
+  else{var w=0,c=0,del=false;(function tick(){var t=words[w];typed.textContent=t.slice(0,c);
+    if(!del&&c===t.length){del=true;return setTimeout(tick,1700);}
+    if(del&&c===0){del=false;w=(w+1)%words.length;return setTimeout(tick,350);}
+    c+=del?-1:1;setTimeout(tick,del?28:60);})();}
+
+  /* particle network in the hero */
+  var cv=$('#fx');
+  if(cv&&!reduce){var x=cv.getContext('2d'),P=[],W,H,run=true;
+    function size(){W=cv.width=hero.clientWidth;H=cv.height=hero.clientHeight;P=[];var n=Math.min(70,Math.floor(W/18));
+      for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});}
+    size();addEventListener('resize',size);
+    new IntersectionObserver(function(e){run=e[0].isIntersecting;if(run)draw();}).observe(hero);
+    function draw(){if(!run)return;x.clearRect(0,0,W,H);
+      for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+        x.fillStyle='rgba(255,255,255,.7)';x.beginPath();x.arc(a.x,a.y,1.6,0,6.3);x.fill();
+        for(var j=i+1;j<P.length;j++){var b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+          if(d<120){x.strokeStyle='rgba(255,255,255,'+(.2*(1-d/120))+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}}}
+      requestAnimationFrame(draw);}
+    draw();}
+
+  /* parallax var, back to top */
+  var toTop=$('#toTop');
+  addEventListener('scroll',function(){var y=scrollY;hero.style.setProperty('--sy',y);toTop.classList.toggle('show',y>700);},{passive:true});
+  toTop.addEventListener('click',function(){scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+
+  /* side dots */
+  var dots=$('#dots'),secs=[['hero','Intro'],['glance','Glance'],['skills','Skills'],['work','Work'],['certs','Certificates'],['story','Story'],['contact','Contact']];
+  secs.forEach(function(s){var a=document.createElement('a');a.href='#'+s[0];a.setAttribute('aria-label',s[1]);a.innerHTML='<span>'+s[1]+'</span>';dots.appendChild(a);});
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){$$('a',dots).forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){var el=document.getElementById(s[0]);if(el)so.observe(el);});
+
+  /* glance: count up + terminal types in */
+  function count(el){var t=+el.dataset.n;if(reduce){el.textContent=t;return;}var t0=performance.now();
+    (function f(n){var p=Math.min((n-t0)/1400,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);}
+  var gio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    e.target.classList.add('is-live');$$('[data-n]',e.target).forEach(count);gio.unobserve(e.target);});},{threshold:.25});
+  $$('.fx-rise').forEach(function(el){gio.observe(el);});
+  if(reduce){$$('.tl').forEach(function(t){t.style.opacity=1;t.style.transform='none';});}
+
+  /* pointer spotlight on cards, magnetic buttons */
+  if(fine&&!reduce){
+    $$('.project,.repo').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
+    $$('.btn').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();
+      b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.28)+'px)';});
+      b.addEventListener('pointerleave',function(){b.style.transform='';});});
+  }
 })();
 </script>
 </body>
