@@ -7,6 +7,7 @@
 <meta name="description" content="Gian Kristopher Ariola, 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. Web and software projects, plus TESDA-certified computer systems servicing.">
 <meta name="theme-color" content="#1741A6">
 <script>
+  document.documentElement.classList.add('js');
   /* set the theme before first paint so there is no flash */
   (function(){
     try{
@@ -23,6 +24,7 @@
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap header-row">
@@ -56,16 +58,17 @@
 <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div>
-        <p class="status">
+        <p class="status rise-in" style="--d:0ms">
           <img src="assets/avatar.jpg" alt="Gian's GitHub avatar" width="46" height="46">
           <span class="status-text">Open to OJT and internships</span>
         </p>
-        <h1><span>Gian</span> <span>Kristopher</span> <span>L. Ariola</span></h1>
-        <p class="lede">I'm a 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. I build websites and apps, and I've trained to set up and maintain the computers, networks and servers they run on.</p>
-        <div class="cta-row">
+        <h1><span class="line" style="--n:0"><span>Gian</span></span> <span class="line" style="--n:1"><span>Kristopher</span></span> <span class="line" style="--n:2"><span>L. Ariola</span></span></h1>
+        <p class="lede rise-in" style="--d:620ms">I'm a 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. I build websites and apps, and I've trained to set up and maintain the computers, networks and servers they run on.</p>
+        <div class="cta-row rise-in" style="--d:760ms">
           <a class="btn btn-signal" href="#work">See my work</a>
           <a class="btn btn-line" href="#certs">View certificates</a>
         </div>
@@ -73,12 +76,12 @@
 
       <figure class="stack">
         <ol class="stack-list" aria-label="My skills, from the interface down to the hardware">
-          <li class="layer" style="--w:58%; --i:5"><b>Interface</b><span>HTML, CSS, JavaScript, Flutter</span></li>
-          <li class="layer" style="--w:66%; --i:4"><b>Application</b><span>PHP, C#, C++</span></li>
-          <li class="layer" style="--w:74%; --i:3"><b>Data</b><span>MySQL</span></li>
-          <li class="layer is-certified" style="--w:82%; --i:2"><b>Servers</b><span>Set up computer servers</span></li>
-          <li class="layer is-certified" style="--w:91%; --i:1"><b>Network</b><span>Set up and maintain networks</span></li>
-          <li class="layer is-certified" style="--w:100%; --i:0"><b>Machines</b><span>Install, configure and service computers</span></li>
+          <li class="layer" style="--w:58%; --i:5"><a class="layer-link" href="#l-interface"><b>Interface</b><span>HTML, CSS, JavaScript, Flutter</span></a></li>
+          <li class="layer" style="--w:66%; --i:4"><a class="layer-link" href="#l-application"><b>Application</b><span>PHP, C#, C++</span></a></li>
+          <li class="layer" style="--w:74%; --i:3"><a class="layer-link" href="#l-data"><b>Data</b><span>MySQL</span></a></li>
+          <li class="layer is-certified" style="--w:82%; --i:2"><a class="layer-link" href="#l-servers"><b>Servers</b><span>Set up computer servers</span></a></li>
+          <li class="layer is-certified" style="--w:91%; --i:1"><a class="layer-link" href="#l-network"><b>Network</b><span>Set up and maintain networks</span></a></li>
+          <li class="layer is-certified" style="--w:100%; --i:0"><a class="layer-link" href="#l-machines"><b>Machines</b><span>Install, configure and service computers</span></a></li>
         </ol>
         <figcaption class="legend">
           <span><i></i>Coursework and projects</span>
@@ -87,6 +90,24 @@
       </figure>
     </div>
   </section>
+
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML5</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS3</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">JavaScript</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="">jQuery</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">C++</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">GitHub</span>
+    </div>
+  </div>
 
   <!-- ============ SKILLS ============ -->
   <section id="skills" class="section">
@@ -97,7 +118,7 @@
       </div>
 
       <div class="layers">
-        <div class="layer-row">
+        <div class="layer-row" id="l-interface">
           <div class="layer-head">
             <h3>Interface</h3>
             <p>What people see and click.</p>
@@ -112,7 +133,7 @@
           </ul>
         </div>
 
-        <div class="layer-row">
+        <div class="layer-row" id="l-application">
           <div class="layer-head">
             <h3>Application</h3>
             <p>The logic behind the screen.</p>
@@ -125,7 +146,7 @@
           </ul>
         </div>
 
-        <div class="layer-row">
+        <div class="layer-row" id="l-data">
           <div class="layer-head">
             <h3>Data</h3>
             <p>Where the information lives.</p>
@@ -135,7 +156,7 @@
           </ul>
         </div>
 
-        <div class="layer-row is-certified">
+        <div class="layer-row is-certified" id="l-servers">
           <div class="layer-head">
             <h3>Servers</h3>
             <p>The machines that host everything.</p>
@@ -146,7 +167,7 @@
           </ul>
         </div>
 
-        <div class="layer-row is-certified">
+        <div class="layer-row is-certified" id="l-network">
           <div class="layer-head">
             <h3>Network</h3>
             <p>How machines talk to each other.</p>
@@ -158,7 +179,7 @@
           </ul>
         </div>
 
-        <div class="layer-row is-certified">
+        <div class="layer-row is-certified" id="l-machines">
           <div class="layer-head">
             <h3>Machines</h3>
             <p>The hardware and operating systems underneath.</p>
@@ -170,7 +191,7 @@
           </ul>
         </div>
 
-        <div class="layer-row">
+        <div class="layer-row" id="l-learning">
           <div class="layer-head">
             <h3>Still learning</h3>
             <p>Newer topics, with Cisco certificates behind them.</p>
@@ -201,10 +222,10 @@
         <a class="btn btn-outline" href="https://github.com/SyRiola" target="_blank" rel="noopener">View GitHub profile</a>
       </div>
       <dl class="gh-stats">
-        <div><dt>Repositories</dt><dd>59</dd></div>
-        <div><dt>Followers</dt><dd>1,334,574</dd></div>
-        <div><dt>Following</dt><dd>13</dd></div>
-        <div><dt>Contributions</dt><dd>3,668</dd></div>
+        <div><dt>Repositories</dt><dd data-count="59">59</dd></div>
+        <div><dt>Followers</dt><dd data-count="1334574">1,334,574</dd></div>
+        <div><dt>Following</dt><dd data-count="13">13</dd></div>
+        <div><dt>Contributions</dt><dd data-count="3668">3,668</dd></div>
       </dl>
 
       <div class="subhead spaced">
@@ -319,121 +340,98 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Certificates</h2>
-        <p>Eleven so far: five TESDA courses in computer systems servicing, plus six trainings and short courses from DICT, DOST, Cisco, and the Province of Isabela. Select any certificate to enlarge it.</p>
+        <p>Eleven so far: five TESDA courses in computer systems servicing, plus six trainings and short courses. Select any certificate to enlarge it, then use the arrow keys to move through them all.</p>
       </div>
 
-      <div class="subhead">
-        <h3>TESDA Online Program: Computer Systems Servicing</h3>
-        <p>All five completed on October 11, 2026</p>
+      <div class="filters" role="group" aria-label="Filter certificates">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span>11</span></button>
+        <button class="filter" type="button" data-filter="tesda" aria-pressed="false">TESDA <span>5</span></button>
+        <button class="filter" type="button" data-filter="training" aria-pressed="false">Trainings and short courses <span>6</span></button>
       </div>
-      <ul class="cert-grid">
-        <li class="cert-card" id="cert-intro">
-          <button class="cert-thumb" type="button" data-full="certificates/tesda-intro-computer-systems-servicing.jpg" data-title="Introduction to Computer Systems Servicing" aria-label="Enlarge certificate: Introduction to Computer Systems Servicing">
-            <img src="certificates/tesda-intro-computer-systems-servicing.jpg" alt="TESDA certificate of completion for Introduction to Computer Systems Servicing" width="1677" height="1186" loading="lazy">
+
+      <ul class="cert-grid" id="certGrid">
+        <li class="cert-card" id="cert-intro" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-intro-computer-systems-servicing.jpg" data-title="Introduction to Computer Systems Servicing" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Introduction to Computer Systems Servicing">
+            <img src="certificates/tesda-intro-computer-systems-servicing.jpg" alt="Certificate: Introduction to Computer Systems Servicing" width="1677" height="1186" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
           <h4>Introduction to Computer Systems Servicing</h4>
           <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
         </li>
-        <li class="cert-card" id="cert-installing">
-          <button class="cert-thumb" type="button" data-full="certificates/tesda-installing-configuring-computer-systems.jpg" data-title="Installing and Configuring Computer Systems" aria-label="Enlarge certificate: Installing and Configuring Computer Systems">
-            <img src="certificates/tesda-installing-configuring-computer-systems.jpg" alt="TESDA certificate of completion for Installing and Configuring Computer Systems" width="1680" height="1183" loading="lazy">
+        <li class="cert-card" id="cert-installing" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-installing-configuring-computer-systems.jpg" data-title="Installing and Configuring Computer Systems" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Installing and Configuring Computer Systems">
+            <img src="certificates/tesda-installing-configuring-computer-systems.jpg" alt="Certificate: Installing and Configuring Computer Systems" width="1680" height="1183" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
           <h4>Installing and Configuring Computer Systems</h4>
           <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
         </li>
-        <li class="cert-card" id="cert-maintaining">
-          <button class="cert-thumb" type="button" data-full="certificates/tesda-maintaining-computer-systems-networks.jpg" data-title="Maintaining Computer Systems and Networks" aria-label="Enlarge certificate: Maintaining Computer Systems and Networks">
-            <img src="certificates/tesda-maintaining-computer-systems-networks.jpg" alt="TESDA certificate of completion for Maintaining Computer Systems and Networks" width="1662" height="1185" loading="lazy">
+        <li class="cert-card" id="cert-maintaining" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-maintaining-computer-systems-networks.jpg" data-title="Maintaining Computer Systems and Networks" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Maintaining Computer Systems and Networks">
+            <img src="certificates/tesda-maintaining-computer-systems-networks.jpg" alt="Certificate: Maintaining Computer Systems and Networks" width="1662" height="1185" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
           <h4>Maintaining Computer Systems and Networks</h4>
           <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
         </li>
-        <li class="cert-card" id="cert-networks">
-          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-networks.jpg" data-title="Setting Up Computer Networks" aria-label="Enlarge certificate: Setting Up Computer Networks">
-            <img src="certificates/tesda-setting-up-computer-networks.jpg" alt="TESDA certificate of completion for Setting Up Computer Networks" width="1671" height="1180" loading="lazy">
+        <li class="cert-card" id="cert-networks" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-networks.jpg" data-title="Setting Up Computer Networks" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Setting Up Computer Networks">
+            <img src="certificates/tesda-setting-up-computer-networks.jpg" alt="Certificate: Setting Up Computer Networks" width="1671" height="1180" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
           <h4>Setting Up Computer Networks</h4>
           <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
         </li>
-        <li class="cert-card" id="cert-servers">
-          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-servers.jpg" data-title="Setting Up Computer Servers" aria-label="Enlarge certificate: Setting Up Computer Servers">
-            <img src="certificates/tesda-setting-up-computer-servers.jpg" alt="TESDA certificate of completion for Setting Up Computer Servers" width="1666" height="1180" loading="lazy">
+        <li class="cert-card" id="cert-servers" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-servers.jpg" data-title="Setting Up Computer Servers" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Setting Up Computer Servers">
+            <img src="certificates/tesda-setting-up-computer-servers.jpg" alt="Certificate: Setting Up Computer Servers" width="1666" height="1180" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
           <h4>Setting Up Computer Servers</h4>
           <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
         </li>
-        <li class="verify">
-          <h4>Want to verify these?</h4>
-          <p>Each certificate carries its own code and is valid without a signature. TESDA asks that verification go through the eTESDA Division.</p>
+        <li class="verify" data-group="tesda">
+          <h4>Want to verify the TESDA ones?</h4>
+          <p>Each TESDA certificate carries its own code and is valid without a signature. Verification goes through the eTESDA Division.</p>
           <p><a href="mailto:tesdaonlineprogram@tesda.gov.ph">tesdaonlineprogram@tesda.gov.ph</a></p>
           <p><a href="tel:+63288938297">(02) 8893-8297</a></p>
         </li>
-      </ul>
-
-      <div class="subhead spaced">
-        <h3>Trainings, seminars and short courses</h3>
-        <p>Six, from July to September 2026</p>
-      </div>
-      <ul class="training-list">
-        <li class="training">
-          <time datetime="2026-09-27">Sep 27, 2026</time>
-          <div>
-            <h4>Introduction to Modern AI</h4>
-            <p>Cisco Networking Academy</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-modern-ai.png" data-title="Introduction to Modern AI" aria-label="Enlarge certificate: Introduction to Modern AI">
-            <img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI" loading="lazy">
+        <li class="cert-card" id="cert-cisco-ai" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-modern-ai.png" data-title="Introduction to Modern AI" data-meta="Cisco Networking Academy, Sep 27, 2026" aria-label="Enlarge certificate: Introduction to Modern AI">
+            <img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>Introduction to Modern AI</h4>
+          <p>Cisco Networking Academy, <time datetime="2026-09-27">Sep 27, 2026</time></p>
         </li>
-        <li class="training">
-          <time datetime="2026-09-27">Sep 27, 2026</time>
-          <div>
-            <h4>Introduction to Data Science</h4>
-            <p>Cisco Networking Academy</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-data-science.png" data-title="Introduction to Data Science" aria-label="Enlarge certificate: Introduction to Data Science">
-            <img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science" loading="lazy">
+        <li class="cert-card" id="cert-cisco-ds" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-data-science.png" data-title="Introduction to Data Science" data-meta="Cisco Networking Academy, Sep 27, 2026" aria-label="Enlarge certificate: Introduction to Data Science">
+            <img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>Introduction to Data Science</h4>
+          <p>Cisco Networking Academy, <time datetime="2026-09-27">Sep 27, 2026</time></p>
         </li>
-        <li class="training">
-          <time datetime="2026-08-19">Aug 19, 2026</time>
-          <div>
-            <h4>Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions</h4>
-            <p>Province of Isabela, Philippine ICT Innovation Network and partners</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-digiwork-expo.jpg" data-title="Isabela DigiWork eXp 2026" aria-label="Enlarge certificate: Isabela DigiWork eXp 2026">
-            <img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026" loading="lazy">
+        <li class="cert-card" id="cert-digiwork" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-digiwork-expo.jpg" data-title="Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions" data-meta="Province of Isabela, Philippine ICT Innovation Network and partners, Aug 19, 2026" aria-label="Enlarge certificate: Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions">
+            <img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions</h4>
+          <p>Province of Isabela, Philippine ICT Innovation Network and partners, <time datetime="2026-08-19">Aug 19, 2026</time></p>
         </li>
-        <li class="training">
-          <time datetime="2026-07-28">Jul 28, 2026</time>
-          <div>
-            <h4>National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation</h4>
-            <p>Department of Information and Communications Technology, Region IV-A</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-disaster-resilience.jpg" data-title="National Disaster Resilience Month 2026" aria-label="Enlarge certificate: National Disaster Resilience Month 2026">
-            <img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026" loading="lazy">
+        <li class="cert-card" id="cert-disaster" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-disaster-resilience.jpg" data-title="National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation" data-meta="DICT, Region IV-A, Jul 28, 2026" aria-label="Enlarge certificate: National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation">
+            <img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation</h4>
+          <p>DICT, Region IV-A, <time datetime="2026-07-28">Jul 28, 2026</time></p>
         </li>
-        <li class="training">
-          <time datetime="2026-07-22">Jul 22, 2026</time>
-          <div>
-            <h4>Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity</h4>
-            <p>Department of Information and Communications Technology, CALABARZON Regional Office</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-deepfakes.jpg" data-title="Digital Trust in the AI Era" aria-label="Enlarge certificate: Digital Trust in the AI Era">
-            <img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era" loading="lazy">
+        <li class="cert-card" id="cert-deepfakes" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-deepfakes.jpg" data-title="Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity" data-meta="DICT, CALABARZON Regional Office, Jul 22, 2026" aria-label="Enlarge certificate: Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity">
+            <img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity</h4>
+          <p>DICT, CALABARZON Regional Office, <time datetime="2026-07-22">Jul 22, 2026</time></p>
         </li>
-        <li class="training">
-          <time datetime="2026-07-08">Jul 8, 2026</time>
-          <div>
-            <h4>i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting</h4>
-            <p>Department of Science and Technology, Rizal (via Zoom)</p>
-          </div>
-          <button class="cert-thumb" type="button" data-full="certificates/cert-dost-i4rizal.jpg" data-title="i4Rizal Episode 1" aria-label="Enlarge certificate: i4Rizal Episode 1">
-            <img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1" loading="lazy">
+        <li class="cert-card" id="cert-i4rizal" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dost-i4rizal.jpg" data-title="i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting" data-meta="DOST Rizal (via Zoom), Jul 8, 2026" aria-label="Enlarge certificate: i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting">
+            <img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting" loading="lazy"><span class="glare" aria-hidden="true"></span>
           </button>
+          <h4>i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting</h4>
+          <p>DOST Rizal (via Zoom), <time datetime="2026-07-08">Jul 8, 2026</time></p>
         </li>
       </ul>
     </div>
@@ -524,66 +522,236 @@
   </div>
 </footer>
 
-<dialog class="lightbox" id="lightbox" aria-label="Certificate preview">
+<dialog class="lightbox" id="lightbox" aria-label="Certificate viewer">
   <div class="lightbox-bar">
-    <p id="lightboxTitle"></p>
+    <div class="lb-text">
+      <p id="lbTitle"></p>
+      <p class="lb-meta" id="lbMeta"></p>
+    </div>
+    <span class="lb-count" id="lbCount" aria-live="polite"></span>
     <form method="dialog">
-      <button class="lightbox-close" aria-label="Close preview">
+      <button class="lightbox-close" aria-label="Close viewer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
       </button>
     </form>
   </div>
-  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-stage">
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous certificate">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next certificate">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
 </dialog>
 
 <script>
-  /* ---- theme toggle (remembers choice) ---- */
-  (function(){
-    var root = document.documentElement;
-    var btn = document.getElementById('themeBtn');
-    function sync(){
-      var dark = root.getAttribute('data-theme') === 'dark';
-      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-    sync();
-    btn.addEventListener('click', function(){
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try{ localStorage.setItem('portfolio-theme', next); }catch(e){}
-      sync();
+(function(){
+  'use strict';
+  var $  = function(s, r){ return (r||document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine   = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var root = document.documentElement;
+
+  /* ---------- theme toggle (remembers choice) ---------- */
+  var themeBtn = $('#themeBtn');
+  function syncTheme(){
+    var dark = root.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  syncTheme();
+  themeBtn.addEventListener('click', function(){
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('portfolio-theme', next); }catch(e){}
+    syncTheme();
+  });
+
+  /* ---------- mobile nav ---------- */
+  var navToggle = $('#navToggle'), nav = $('#nav');
+  function setNav(open){
+    nav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  navToggle.addEventListener('click', function(){ setNav(!nav.classList.contains('open')); });
+  $$('a', nav).forEach(function(a){ a.addEventListener('click', function(){ setNav(false); }); });
+
+  /* ---------- scroll progress + header shadow ---------- */
+  var progress = $('#progress'), header = $('.site-header'), ticking = false;
+  function onScroll(){
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.setProperty('--p', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+    header.classList.toggle('scrolled', window.scrollY > 8);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+  onScroll();
+
+  /* ---------- tech ticker: clone the track so it loops ---------- */
+  var track = $('#tickerTrack');
+  if(track){ $$('.ticker-item', track).forEach(function(n){ track.appendChild(n.cloneNode(true)); }); }
+
+  /* ---------- scroll reveal with stagger ---------- */
+  var groups = ['.section-head','.layer-row','.gh','.gh-stats','.subhead','.repo','.project','.filters',
+                '.cert-card','.verify','.prose','.facts','.build-list li','.step','.contact .wrap > *'];
+  var revealEls = [];
+  groups.forEach(function(sel){ $$(sel).forEach(function(el){ el.setAttribute('data-reveal',''); revealEls.push(el); }); });
+  revealEls.forEach(function(el){
+    var sibs = $$(':scope > [data-reveal]', el.parentNode);
+    el.style.setProperty('--d', Math.min(sibs.indexOf(el), 6) * 80 + 'ms');
+  });
+
+  var counters = $$('[data-count]');
+  function fmt(n){ return n.toLocaleString('en-US'); }
+  function countUp(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if(reduce){ el.textContent = fmt(target); return; }
+    var t0 = performance.now(), dur = 1500;
+    (function step(now){
+      var p = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(target * e));
+      if(p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  if(!reduce){ counters.forEach(function(el){ el.textContent = '0'; }); }
+
+  function reveal(el){
+    el.classList.add('is-in');
+    if(el.classList.contains('gh-stats')){ $$('[data-count]', el).forEach(countUp); }
+  }
+  if(reduce || !('IntersectionObserver' in window)){
+    revealEls.forEach(reveal);
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ reveal(e.target); io.unobserve(e.target); } });
+    }, {threshold:0.14, rootMargin:'0px 0px -6% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- nav scroll-spy + active skill layer ---------- */
+  if('IntersectionObserver' in window){
+    var links = $$('a', nav);
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        links.forEach(function(a){ a.removeAttribute('aria-current'); });
+        var l = $('a[href="#' + e.target.id + '"]', nav);
+        if(l) l.setAttribute('aria-current', 'true');
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    $$('main > section[id]').forEach(function(s){ spy.observe(s); });
+
+    var rowSpy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.target.classList.toggle('is-active', e.isIntersecting); });
+    }, {rootMargin:'-42% 0px -42% 0px'});
+    $$('.layer-row').forEach(function(r){ rowSpy.observe(r); });
+  }
+
+  /* ---------- hero: spotlight follows the pointer, stack tilts ---------- */
+  var hero = $('#hero'), stackList = $('.stack-list');
+  if(hero && fine && !reduce){
+    hero.addEventListener('pointermove', function(e){
+      var r = hero.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      hero.style.setProperty('--mx', (x * 100) + '%');
+      hero.style.setProperty('--my', (y * 100) + '%');
+      stackList.style.setProperty('--ry', ((x - .5) * 10) + 'deg');
+      stackList.style.setProperty('--rx', (-(y - .5) * 8) + 'deg');
     });
-  })();
+    hero.addEventListener('pointerleave', function(){
+      stackList.style.setProperty('--ry', '0deg');
+      stackList.style.setProperty('--rx', '0deg');
+    });
+  }
 
-  /* ---- mobile nav ---- */
-  (function(){
-    var toggle = document.getElementById('navToggle');
-    var nav = document.getElementById('nav');
-    function setOpen(open){
-      nav.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    }
-    toggle.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
-    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
-  })();
-
-  /* ---- certificate lightbox ---- */
-  (function(){
-    var box = document.getElementById('lightbox');
-    var img = document.getElementById('lightboxImg');
-    var title = document.getElementById('lightboxTitle');
-    document.querySelectorAll('.cert-thumb[data-full]').forEach(function(b){
-      b.addEventListener('click', function(){
-        img.src = b.getAttribute('data-full');
-        img.alt = 'Certificate: ' + b.getAttribute('data-title');
-        title.textContent = b.getAttribute('data-title');
-        box.showModal();
+  /* ---------- certificate cards: tilt and glare ---------- */
+  if(fine && !reduce){
+    $$('.cert-thumb').forEach(function(t){
+      t.addEventListener('pointermove', function(e){
+        var r = t.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        t.style.setProperty('--ry', ((x - .5) * 9) + 'deg');
+        t.style.setProperty('--rx', (-(y - .5) * 7) + 'deg');
+        t.style.setProperty('--gx', (x * 100) + '%');
+        t.style.setProperty('--gy', (y * 100) + '%');
+      });
+      t.addEventListener('pointerleave', function(){
+        t.style.setProperty('--ry', '0deg');
+        t.style.setProperty('--rx', '0deg');
       });
     });
-    box.addEventListener('click', function(e){ if(e.target === box) box.close(); });
-    box.addEventListener('close', function(){ img.src = ''; });
-  })();
+  }
+
+  /* ---------- certificate filters ---------- */
+  var filterBtns = $$('.filter'), gridItems = $$('#certGrid [data-group]');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var g = btn.getAttribute('data-filter'), n = 0;
+      filterBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      gridItems.forEach(function(it){
+        var show = g === 'all' || it.getAttribute('data-group') === g;
+        it.hidden = !show;
+        if(!show) return;
+        it.classList.add('is-in');
+        it.classList.remove('enter');
+        if(!reduce){
+          void it.offsetWidth;
+          it.style.setProperty('--d', (n++ * 55) + 'ms');
+          it.classList.add('enter');
+        }
+      });
+    });
+  });
+
+  /* ---------- certificate viewer: next / previous / keys / swipe ---------- */
+  var box = $('#lightbox'), img = $('#lightboxImg'), lbTitle = $('#lbTitle'),
+      lbMeta = $('#lbMeta'), lbCount = $('#lbCount');
+  var list = [], idx = 0, lastFocus = null;
+
+  function visibleThumbs(){ return $$('#certGrid > :not([hidden]) .cert-thumb'); }
+  function show(i, dir){
+    idx = (i + list.length) % list.length;
+    var b = list[idx];
+    img.classList.remove('swap');
+    img.style.setProperty('--dir', (dir || 0) * 40 + 'px');
+    img.src = b.getAttribute('data-full');
+    img.alt = 'Certificate: ' + b.getAttribute('data-title');
+    lbTitle.textContent = b.getAttribute('data-title');
+    lbMeta.textContent  = b.getAttribute('data-meta') || '';
+    lbCount.textContent = (idx + 1) + ' of ' + list.length;
+    if(!reduce){ void img.offsetWidth; img.classList.add('swap'); }
+    [idx + 1, idx - 1].forEach(function(j){
+      var n = list[(j + list.length) % list.length];
+      if(n){ (new Image()).src = n.getAttribute('data-full'); }
+    });
+  }
+  $$('.cert-thumb[data-full]').forEach(function(b){
+    b.addEventListener('click', function(){
+      list = visibleThumbs();
+      lastFocus = b;
+      show(list.indexOf(b), 0);
+      box.showModal();
+    });
+  });
+  $('#lbPrev').addEventListener('click', function(){ show(idx - 1, -1); });
+  $('#lbNext').addEventListener('click', function(){ show(idx + 1, 1); });
+  box.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowLeft'){ e.preventDefault(); show(idx - 1, -1); }
+    if(e.key === 'ArrowRight'){ e.preventDefault(); show(idx + 1, 1); }
+  });
+  box.addEventListener('click', function(e){ if(e.target === box) box.close(); });
+  box.addEventListener('close', function(){ img.removeAttribute('src'); if(lastFocus) lastFocus.focus(); });
+  var sx = null;
+  box.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  box.addEventListener('touchend', function(e){
+    if(sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx; sx = null;
+    if(Math.abs(dx) > 50){ show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); }
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>
