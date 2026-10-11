@@ -3,574 +3,587 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gian Kristopher Ariola - Portfolio</title>
+<title>Gian Kristopher Ariola | Web and software developer</title>
+<meta name="description" content="Gian Kristopher Ariola, 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. Web and software projects, plus TESDA-certified computer systems servicing.">
+<meta name="theme-color" content="#1741A6">
+<script>
+  /* set the theme before first paint so there is no flash */
+  (function(){
+    try{
+      var t = localStorage.getItem('portfolio-theme');
+      if(!t){ t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    }catch(e){}
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="topbar">
-  <div class="pill">
-    <div class="brand">gian<span class="dot">.</span>ariola</div>
-    <nav class="links" id="navLinks">
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="Gian Ariola, back to top">
+      <svg viewBox="0 0 24 20" aria-hidden="true">
+        <rect x="5" y="0" width="14" height="5" rx="1.5" fill="var(--accent)"/>
+        <rect x="2" y="7.5" width="20" height="5" rx="1.5" fill="var(--accent)"/>
+        <rect x="0" y="15" width="24" height="5" rx="1.5" fill="var(--signal)"/>
+      </svg>
+      Gian Ariola
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
       <a href="#skills">Skills</a>
       <a href="#work">Work</a>
-      <a href="#story">Story</a>
       <a href="#certs">Certificates</a>
+      <a href="#story">Story</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="bar-actions">
-      <button class="theme-toggle" id="themeBtn" aria-label="Toggle dark and light mode">
-        <span id="themeKnob">🌙</span>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
       </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>
     </div>
   </div>
-</div>
+</header>
 
-<main>
+<main id="main">
+
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero-bg"></div>
     <div class="wrap hero-grid">
-      <div class="term">
-        <div class="term-bar">
-          <span class="term-dot" style="background:#ff5f57;"></span>
-          <span class="term-dot" style="background:#febc2e;"></span>
-          <span class="term-dot" style="background:#28c840;"></span>
-        </div>
-        <div class="term-body">
-          <div class="typeline"><span class="p">gian@nec</span><span class="c">:~$</span> <span id="typed"></span><span class="caret"></span></div>
-        </div>
-      </div>
       <div>
-        <div class="hero-id">
-          <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola">
-          <span class="status">● open to OJT &amp; internships</span>
-        </div>
-        <h1>Gian Kristopher L. Ariola</h1>
-        <p class="lede">3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela — building things with code and picking up new frameworks along the way.</p>
+        <p class="status">
+          <img src="assets/avatar.jpg" alt="Gian's GitHub avatar" width="46" height="46">
+          <span class="status-text">Open to OJT and internships</span>
+        </p>
+        <h1><span>Gian</span> <span>Kristopher</span> <span>L. Ariola</span></h1>
+        <p class="lede">I'm a 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. I build websites and apps, and I've trained to set up and maintain the computers, networks and servers they run on.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#work">See my work</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-signal" href="#work">See my work</a>
+          <a class="btn btn-line" href="#certs">View certificates</a>
         </div>
-        <div class="hero-stats">
-          <div><div class="hs-num">11</div><div class="hs-label">Tech skills</div></div>
-          <div><div class="hs-num">6</div><div class="hs-label">Certificates</div></div>
-          <div><div class="hs-num">6</div><div class="hs-label">Projects</div></div>
-          <div><div class="hs-num">3rd</div><div class="hs-label">Year standing</div></div>
+      </div>
+
+      <figure class="stack">
+        <ol class="stack-list" aria-label="My skills, from the interface down to the hardware">
+          <li class="layer" style="--w:58%; --i:5"><b>Interface</b><span>HTML, CSS, JavaScript, Flutter</span></li>
+          <li class="layer" style="--w:66%; --i:4"><b>Application</b><span>PHP, C#, C++</span></li>
+          <li class="layer" style="--w:74%; --i:3"><b>Data</b><span>MySQL</span></li>
+          <li class="layer is-certified" style="--w:82%; --i:2"><b>Servers</b><span>Set up computer servers</span></li>
+          <li class="layer is-certified" style="--w:91%; --i:1"><b>Network</b><span>Set up and maintain networks</span></li>
+          <li class="layer is-certified" style="--w:100%; --i:0"><b>Machines</b><span>Install, configure and service computers</span></li>
+        </ol>
+        <figcaption class="legend">
+          <span><i></i>Coursework and projects</span>
+          <span><i class="cert"></i>TESDA certified, October 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Skills, from the machine up</h2>
+        <p>Most of my coursework is on the software side. I also trained in computer systems servicing, so I know what the code is running on.</p>
+      </div>
+
+      <div class="layers">
+        <div class="layer-row">
+          <div class="layer-head">
+            <h3>Interface</h3>
+            <p>What people see and click.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:90%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:85%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">JavaScript</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="">jQuery</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:80%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart (Flutter)</span><span class="skill-level">Used in 3 apps</span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row">
+          <div class="layer-head">
+            <h3>Application</h3>
+            <p>The logic behind the screen.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">C++</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#</span><span class="skill-level">Beginner–Intermediate</span><span class="meter" style="--lvl:55%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git and GitHub</span><span class="skill-level">Daily use</span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row">
+          <div class="layer-head">
+            <h3>Data</h3>
+            <p>Where the information lives.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:75%"></span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified">
+          <div class="layer-head">
+            <h3>Servers</h3>
+            <p>The machines that host everything.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-servers">Setting Up Computer Servers <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified">
+          <div class="layer-head">
+            <h3>Network</h3>
+            <p>How machines talk to each other.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-networks">Setting Up Computer Networks <small>View certificate</small></a></li>
+            <li><a href="#cert-maintaining">Maintaining Computer Systems and Networks <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified">
+          <div class="layer-head">
+            <h3>Machines</h3>
+            <p>The hardware and operating systems underneath.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-installing">Installing and Configuring Computer Systems <small>View certificate</small></a></li>
+            <li><a href="#cert-intro">Introduction to Computer Systems Servicing <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row">
+          <div class="layer-head">
+            <h3>Still learning</h3>
+            <p>Newer topics, with Cisco certificates behind them.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name">Modern AI</span><span class="skill-level">Beginner</span><span class="meter" style="--lvl:40%"></span></li>
+            <li class="skill"><span class="skill-name">Data Science</span><span class="skill-level">Beginner</span><span class="meter" style="--lvl:40%"></span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="logo-strip" aria-hidden="true">
-    <div class="logo-track">
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span>HTML5</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span>CSS3</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""><span>JavaScript</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt=""><span>jQuery</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""><span>Bootstrap</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""><span>PHP</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span>C++</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt=""><span>C#</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt=""><span>MySQL</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""><span>Dart</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><span>Git</span></div>
-      <div class="logo-item" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""><span>GitHub</span></div>
-    </div>
-  </div>
+  <!-- ============ WORK ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What I've shipped and what's on GitHub</h2>
+        <p>Course finals, side projects, and a few apps I keep improving between semesters.</p>
+      </div>
 
-  <section id="skills" class="wrap block reveal">
-    <div class="block-head">
-      <span class="tag-label">Skills</span>
-      <h2>What I work with</h2>
-    </div>
+      <div class="gh">
+        <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" width="64" height="64">
+        <div>
+          <div class="gh-name">SyRiola</div>
+          <div class="gh-handle">@SyRiola, he/him</div>
+        </div>
+        <a class="btn btn-outline" href="https://github.com/SyRiola" target="_blank" rel="noopener">View GitHub profile</a>
+      </div>
+      <dl class="gh-stats">
+        <div><dt>Repositories</dt><dd>59</dd></div>
+        <div><dt>Followers</dt><dd>1,334,574</dd></div>
+        <div><dt>Following</dt><dd>13</dd></div>
+        <div><dt>Contributions</dt><dd>3,668</dd></div>
+      </dl>
 
-    <div class="skill-groups">
-      <div class="skill-card">
-        <h3>Web</h3>
-        <div class="tag-row">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">jQuery</span>
-          <span class="tag">Bootstrap</span>
-        </div>
+      <div class="subhead spaced">
+        <h3>Repositories</h3>
+        <p>A few things I keep pushed up to GitHub</p>
       </div>
-      <div class="skill-card">
-        <h3>Languages</h3>
-        <div class="tag-row">
-          <span class="tag">PHP</span>
-          <span class="tag">C++</span>
-          <span class="tag">C#</span>
-        </div>
+      <div class="repo-list">
+        <a class="repo" href="https://github.com/SyRiola/mvc_hotel" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">mvc_hotel</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">A hotel reservation and management framework built with the MVC pattern for our Web Development, Database Management, and Networking finals. It handles room bookings, guest check-in/out, staff accounts, and a billing module with receipt generation.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span>
+            <span>★ 24,564</span>
+            <span>Updated 3 months ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/CIT-web-Development-" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">CIT-web-Development-</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Layout and styling exercises from the CIT Web Development course: responsive grids, flexbox layouts, and a handful of themed landing page mockups built while learning the fundamentals.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</span>
+            <span>★ 175,686</span>
+            <span>Updated 5 months ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/Food-app" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">Food-app</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">A Flutter food ordering app with a browsable menu, cart and checkout flow, and order-status tracking. Built to get more comfortable with state management and hooking a front end up to an API.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 25,678</span>
+            <span>Updated 1 month ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/MedicAppV2" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">MedicAppV2</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Second version of a Flutter medical app for patients of all ages: appointment booking, medicine reminders, and a simple patient records view, with a redesigned onboarding flow over the first draft.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 36,578</span>
+            <span>Updated 2 weeks ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/medic-app-v3" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">medic-app-v3</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Latest iteration of the medical app, rebuilt with a cleaner UI, offline-friendly local storage, and smoother appointment-scheduling logic. An ongoing side project between semesters.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 15,678</span>
+            <span>Updated this week</span>
+          </div>
+        </a>
       </div>
-      <div class="skill-card">
-        <h3>Data</h3>
-        <div class="tag-row">
-          <span class="tag">MySQL</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>AI &amp; Data Science</h3>
-        <div class="tag-row">
-          <span class="tag">Modern AI</span>
-          <span class="tag">Data Science</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="prof-block">
-      <h3>Proficiency</h3>
-      <div class="prof-grid">
-        <div class="prof-row">
-          <div class="prof-top"><span>HTML</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="90"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>CSS</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="85"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>JavaScript</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>jQuery</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Bootstrap</span><span class="lvl">Advanced</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="80"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>PHP</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="70"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>MySQL</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="75"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>C++</span><span class="lvl">Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="65"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>C#</span><span class="lvl">Beginner–Intermediate</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="55"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Modern AI</span><span class="lvl">Beginner</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
-        </div>
-        <div class="prof-row">
-          <div class="prof-top"><span>Data Science</span><span class="lvl">Beginner</span></div>
-          <div class="prof-bar"><div class="prof-fill" data-level="40"></div></div>
-        </div>
+      <div class="subhead spaced">
+        <h3>Coursework and practice projects</h3>
+      </div>
+      <!-- TODO: these six are still sample placeholders. Swap in your real projects. -->
+      <div class="project-grid">
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Campus Event Tracker</h4>
+          <p>A small web app where students browse upcoming school events and RSVP, with an admin panel to post new listings.</p>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Personal project</p>
+          <h4>Grade Analyzer</h4>
+          <p>A C# desktop tool that computes GWA and charts grade trends per semester to help plan course loads.</p>
+          <div class="chips"><span class="chip">C#</span><span class="chip">MySQL</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Library Queue System</h4>
+          <p>A lightweight reservation queue for shared library computers, with live slot updates on the page.</p>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">PHP</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Practice project</p>
+          <h4>Inventory CLI</h4>
+          <p>A console-based inventory manager built to practice data structures, file handling, and menu-driven logic.</p>
+          <div class="chips"><span class="chip">C++</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Personal project</p>
+          <h4>Study Planner</h4>
+          <p>A to-do and scheduling page for organizing deadlines by subject, with local progress tracking.</p>
+          <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Simple POS System</h4>
+          <p>A point-of-sale mockup for a school canteen stall, covering orders, receipts, and a basic sales log.</p>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="work" class="wrap block reveal">
-    <div class="block-head">
-      <span class="tag-label">Work</span>
-      <h2>What I've shipped and what's on GitHub</h2>
-    </div>
+  <!-- ============ CERTIFICATES ============ -->
+  <section id="certs" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Certificates</h2>
+        <p>Eleven so far: five TESDA courses in computer systems servicing, plus six trainings and short courses from DICT, DOST, Cisco, and the Province of Isabela. Select any certificate to enlarge it.</p>
+      </div>
 
-    <div class="gh-profile">
-      <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" class="gh-avatar">
-      <div class="gh-profile-info">
-        <div class="gh-name">SyRiola</div>
-        <div class="gh-handle mono">@SyRiola · he/him</div>
+      <div class="subhead">
+        <h3>TESDA Online Program: Computer Systems Servicing</h3>
+        <p>All five completed on October 11, 2026</p>
       </div>
-      <a class="btn btn-ghost" href="https://github.com/SyRiola" target="_blank" rel="noopener">View profile ↗</a>
-    </div>
+      <ul class="cert-grid">
+        <li class="cert-card" id="cert-intro">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-intro-computer-systems-servicing.jpg" data-title="Introduction to Computer Systems Servicing" aria-label="Enlarge certificate: Introduction to Computer Systems Servicing">
+            <img src="certificates/tesda-intro-computer-systems-servicing.jpg" alt="TESDA certificate of completion for Introduction to Computer Systems Servicing" width="1677" height="1186" loading="lazy">
+          </button>
+          <h4>Introduction to Computer Systems Servicing</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-installing">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-installing-configuring-computer-systems.jpg" data-title="Installing and Configuring Computer Systems" aria-label="Enlarge certificate: Installing and Configuring Computer Systems">
+            <img src="certificates/tesda-installing-configuring-computer-systems.jpg" alt="TESDA certificate of completion for Installing and Configuring Computer Systems" width="1680" height="1183" loading="lazy">
+          </button>
+          <h4>Installing and Configuring Computer Systems</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-maintaining">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-maintaining-computer-systems-networks.jpg" data-title="Maintaining Computer Systems and Networks" aria-label="Enlarge certificate: Maintaining Computer Systems and Networks">
+            <img src="certificates/tesda-maintaining-computer-systems-networks.jpg" alt="TESDA certificate of completion for Maintaining Computer Systems and Networks" width="1662" height="1185" loading="lazy">
+          </button>
+          <h4>Maintaining Computer Systems and Networks</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-networks">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-networks.jpg" data-title="Setting Up Computer Networks" aria-label="Enlarge certificate: Setting Up Computer Networks">
+            <img src="certificates/tesda-setting-up-computer-networks.jpg" alt="TESDA certificate of completion for Setting Up Computer Networks" width="1671" height="1180" loading="lazy">
+          </button>
+          <h4>Setting Up Computer Networks</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-servers">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-servers.jpg" data-title="Setting Up Computer Servers" aria-label="Enlarge certificate: Setting Up Computer Servers">
+            <img src="certificates/tesda-setting-up-computer-servers.jpg" alt="TESDA certificate of completion for Setting Up Computer Servers" width="1666" height="1180" loading="lazy">
+          </button>
+          <h4>Setting Up Computer Servers</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="verify">
+          <h4>Want to verify these?</h4>
+          <p>Each certificate carries its own code and is valid without a signature. TESDA asks that verification go through the eTESDA Division.</p>
+          <p><a href="mailto:tesdaonlineprogram@tesda.gov.ph">tesdaonlineprogram@tesda.gov.ph</a></p>
+          <p><a href="tel:+63288938297">(02) 8893-8297</a></p>
+        </li>
+      </ul>
 
-    <div class="stats" style="margin-bottom:10px;">
-      <div class="stat"><div class="num" data-count="59">0</div><div class="label">Repositories</div></div>
-      <div class="stat"><div class="num" data-count="1334574">0</div><div class="label">Follower</div></div>
-      <div class="stat"><div class="num" data-count="13">0</div><div class="label">Following</div></div>
-      <div class="stat"><div class="num" data-count="3668">0</div><div class="label">Contributions</div></div>
-    </div>
-
-    <div class="work-sub">
-      <h3>Open source / repos</h3>
-      <span class="count">A few things I keep pushed up to GitHub</span>
-    </div>
-    <div class="repo-grid">
-      <a class="repo-card" href="https://github.com/SyRiola/mvc_hotel" target="_blank" rel="noopener">
-        <div class="repo-top"><span class="repo-icon">⌥</span><span class="repo-name">mvc_hotel</span><span class="repo-visibility">Public</span></div>
-        <p class="repo-desc">A hotel reservation and management framework built with the MVC pattern for our Web Development, Database Management, and Networking finals — handles room bookings, guest check-in/out, staff accounts, and a billing module with receipt generation.</p>
-        <div class="repo-meta"><span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt=""> PHP</span><span class="repo-star">★ 24564</span><span class="repo-updated">Updated 3 months ago</span></div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/CIT-web-Development-" target="_blank" rel="noopener">
-        <div class="repo-top"><span class="repo-icon">⌥</span><span class="repo-name">CIT-web-Development-</span><span class="repo-visibility">Public</span></div>
-        <p class="repo-desc">Repository of layout and styling exercises from the CIT Web Development course — responsive grids, flexbox layouts, and a handful of themed landing page mockups built while learning the fundamentals.</p>
-        <div class="repo-meta"><span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""> CSS</span><span class="repo-star">★ 175686</span><span class="repo-updated">Updated 5 months ago</span></div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/Food-app" target="_blank" rel="noopener">
-        <div class="repo-top"><span class="repo-icon">⌥</span><span class="repo-name">Food-app</span><span class="repo-visibility">Public</span></div>
-        <p class="repo-desc">A Flutter food ordering app with a browsable menu, cart and checkout flow, and order-status tracking — built to get more comfortable with state management and hooking a front end up to an API.</p>
-        <div class="repo-meta"><span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span><span class="repo-star">★ 25678</span><span class="repo-updated">Updated 1 month ago</span></div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/MedicAppV2" target="_blank" rel="noopener">
-        <div class="repo-top"><span class="repo-icon">⌥</span><span class="repo-name">MedicAppV2</span><span class="repo-visibility">Public</span></div>
-        <p class="repo-desc">Second version of a Flutter medical app for patients of all ages — appointment booking, medicine reminders, and a simple patient records view, with a redesigned onboarding flow over the first draft.</p>
-        <div class="repo-meta"><span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span><span class="repo-star">★ 36578</span><span class="repo-updated">Updated 2 weeks ago</span></div>
-      </a>
-      <a class="repo-card" href="https://github.com/SyRiola/medic-app-v3" target="_blank" rel="noopener">
-        <div class="repo-top"><span class="repo-icon">⌥</span><span class="repo-name">medic-app-v3</span><span class="repo-visibility">Public</span></div>
-        <p class="repo-desc">Latest iteration of the medical app, rebuilt with a cleaner UI, offline-friendly local storage, and smoother appointment-scheduling logic — an ongoing side project between semesters.</p>
-        <div class="repo-meta"><span class="repo-lang"><img class="lang-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt=""> Dart</span><span class="repo-star">★ 15678</span><span class="repo-updated">Updated this week</span></div>
-      </a>
-    </div>
-
-    <div class="work-sub">
-      <h3>Coursework &amp; practice projects</h3>
-      <span class="count">Sample placeholders — swap in your real projects</span>
-    </div>
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="project-icon">🎓</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Campus Event Tracker</h4>
-        <p class="desc">A small web app where students browse upcoming school events and RSVP, with an admin panel to post new listings.</p>
-        <div class="project-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span></div>
+      <div class="subhead spaced">
+        <h3>Trainings, seminars and short courses</h3>
+        <p>Six, from July to September 2026</p>
       </div>
-      <div class="project-card">
-        <div class="project-icon">📊</div>
-        <span class="project-status">PERSONAL PROJECT</span>
-        <h4>Grade Analyzer</h4>
-        <p class="desc">A C# desktop tool that computes GWA and charts grade trends per semester to help plan course loads.</p>
-        <div class="project-tags"><span class="tag">C#</span><span class="tag">MySQL</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">📚</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Library Queue System</h4>
-        <p class="desc">A lightweight reservation queue for shared library computers, with live slot updates on the page.</p>
-        <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">PHP</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">📦</div>
-        <span class="project-status">PRACTICE PROJECT</span>
-        <h4>Inventory CLI</h4>
-        <p class="desc">A console-based inventory manager built to practice data structures, file handling, and menu-driven logic.</p>
-        <div class="project-tags"><span class="tag">C++</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🗓️</div>
-        <span class="project-status">PERSONAL PROJECT</span>
-        <h4>Study Planner</h4>
-        <p class="desc">A to-do and scheduling page for organizing deadlines by subject, with local progress tracking.</p>
-        <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🧾</div>
-        <span class="project-status">COURSEWORK PROJECT</span>
-        <h4>Simple POS System</h4>
-        <p class="desc">A point-of-sale mockup for a school canteen stall, covering orders, receipts, and a basic sales log.</p>
-        <div class="project-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="story" class="wrap block reveal">
-    <div class="block-head">
-      <span class="tag-label">Story</span>
-      <h2>What drives me</h2>
-    </div>
-    <div class="passion-grid">
-      <div>
-        <p>I like turning a vague idea into something you can actually click through — that's most of the appeal of programming for me. I'm drawn to projects that fix a specific, real annoyance: a queue that's actually fair, a records app that doesn't make a patient dig through five menus just to book a check-up.</p>
-        <p>Outside of class I keep showing up to ICT and cybersecurity talks run by DICT, DOST, and local provincial offices — not because I have to, but because I want a running sense of where the industry is heading before I graduate into it. AI, digital trust, and secure systems are the topics I keep gravitating back to.</p>
-        <div class="quote-card">Build the thing you wish already existed.</div>
-      </div>
-      <ul class="fact-list">
-        <li><span class="k">School</span><b>North Eastern College, Isabela</b></li>
-        <li><span class="k">Level</span><b>3rd Year Student</b></li>
-        <li><span class="k">Focus</span><b>Web &amp; software development</b></li>
-        <li><span class="k">Based in</span><b>Isabela, Philippines</b></li>
+      <ul class="training-list">
+        <li class="training">
+          <time datetime="2026-09-27">Sep 27, 2026</time>
+          <div>
+            <h4>Introduction to Modern AI</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-modern-ai.png" data-title="Introduction to Modern AI" aria-label="Enlarge certificate: Introduction to Modern AI">
+            <img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI" loading="lazy">
+          </button>
+        </li>
+        <li class="training">
+          <time datetime="2026-09-27">Sep 27, 2026</time>
+          <div>
+            <h4>Introduction to Data Science</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-data-science.png" data-title="Introduction to Data Science" aria-label="Enlarge certificate: Introduction to Data Science">
+            <img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science" loading="lazy">
+          </button>
+        </li>
+        <li class="training">
+          <time datetime="2026-08-19">Aug 19, 2026</time>
+          <div>
+            <h4>Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions</h4>
+            <p>Province of Isabela, Philippine ICT Innovation Network and partners</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-digiwork-expo.jpg" data-title="Isabela DigiWork eXp 2026" aria-label="Enlarge certificate: Isabela DigiWork eXp 2026">
+            <img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026" loading="lazy">
+          </button>
+        </li>
+        <li class="training">
+          <time datetime="2026-07-28">Jul 28, 2026</time>
+          <div>
+            <h4>National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation</h4>
+            <p>Department of Information and Communications Technology, Region IV-A</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-disaster-resilience.jpg" data-title="National Disaster Resilience Month 2026" aria-label="Enlarge certificate: National Disaster Resilience Month 2026">
+            <img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026" loading="lazy">
+          </button>
+        </li>
+        <li class="training">
+          <time datetime="2026-07-22">Jul 22, 2026</time>
+          <div>
+            <h4>Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity</h4>
+            <p>Department of Information and Communications Technology, CALABARZON Regional Office</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-deepfakes.jpg" data-title="Digital Trust in the AI Era" aria-label="Enlarge certificate: Digital Trust in the AI Era">
+            <img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era" loading="lazy">
+          </button>
+        </li>
+        <li class="training">
+          <time datetime="2026-07-08">Jul 8, 2026</time>
+          <div>
+            <h4>i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting</h4>
+            <p>Department of Science and Technology, Rizal (via Zoom)</p>
+          </div>
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dost-i4rizal.jpg" data-title="i4Rizal Episode 1" aria-label="Enlarge certificate: i4Rizal Episode 1">
+            <img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1" loading="lazy">
+          </button>
+        </li>
       </ul>
     </div>
+  </section>
 
-    <div class="dream-tags" style="margin-bottom:40px;">
-      <h3>Things I'd love to build</h3>
-      <div class="tag-row">
-        <span class="tag">A service app for my hometown barangay</span>
-        <span class="tag">A contribution to an open-source security tool</span>
-        <span class="tag">My own small dev studio, someday</span>
-        <span class="tag">A mentoring track for incoming NEC students</span>
+  <!-- ============ STORY ============ -->
+  <section id="story" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What drives me</h2>
+        <p>Where I'm headed, and why I keep showing up to ICT events.</p>
       </div>
-    </div>
 
-    <div class="career-track">
-      <h3>Career track</h3>
-      <div class="track-line">
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Now</span>
-          <h4>Student Developer</h4>
-          <p>Finishing coursework at NEC, shipping small full-stack projects, and picking up new frameworks outside of class.</p>
+      <div class="story-grid">
+        <div class="prose">
+          <p>I like turning a vague idea into something you can actually click through. That's most of the appeal of programming for me. I'm drawn to projects that fix a specific, real annoyance: a queue that's actually fair, a records app that doesn't make a patient dig through five menus just to book a check-up.</p>
+          <p>Outside of class I keep showing up to ICT and cybersecurity talks run by DICT, DOST, and local provincial offices. Not because I have to, but because I want a running sense of where the industry is heading before I graduate into it. AI, digital trust, and secure systems are the topics I keep gravitating back to.</p>
+          <p>The TESDA courses added the other half: knowing how to install, configure and maintain the systems that software actually runs on.</p>
+          <blockquote class="pullquote">Build the thing you wish already existed.</blockquote>
         </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Next</span>
-          <h4>OJT / Internship</h4>
-          <p>Looking for on-the-job training or an internship in web or software development — ideally on something real people use.</p>
-        </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Then</span>
-          <h4>Junior Full-Stack Developer</h4>
-          <p>Growing into a junior dev role, ideally somewhere that also touches backend systems and security.</p>
-        </div>
-        <div class="track-item">
-          <div class="track-dot"></div>
-          <span class="track-stage">Someday</span>
-          <h4>Software Engineer &amp; Mentor</h4>
-          <p>Senior enough to design systems end-to-end, and giving back by mentoring students coming up the same way I did.</p>
-        </div>
+        <dl class="facts">
+          <div><dt>School</dt><dd>North Eastern College, Isabela</dd></div>
+          <div><dt>Level</dt><dd>3rd Year Student</dd></div>
+          <div><dt>Focus</dt><dd>Web and software development</dd></div>
+          <div><dt>Based in</dt><dd>Isabela, Philippines</dd></div>
+        </dl>
+      </div>
+
+      <div class="build">
+        <div class="subhead"><h3>Things I'd love to build</h3></div>
+        <ul class="build-list">
+          <li>A service app for my hometown barangay</li>
+          <li>A contribution to an open-source security tool</li>
+          <li>My own small dev studio, someday</li>
+          <li>A mentoring track for incoming NEC students</li>
+        </ul>
+      </div>
+
+      <div class="build">
+        <div class="subhead"><h3>Career track</h3></div>
+        <ol class="timeline">
+          <li class="step">
+            <span class="step-stage">Now</span>
+            <h4>Student Developer</h4>
+            <p>Finishing coursework at NEC, shipping small full-stack projects, and picking up new frameworks outside of class.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Next</span>
+            <h4>OJT / Internship</h4>
+            <p>Looking for on-the-job training or an internship in web or software development, ideally on something real people use.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Then</span>
+            <h4>Junior Full-Stack Developer</h4>
+            <p>Growing into a junior dev role, ideally somewhere that also touches backend systems and security.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Someday</span>
+            <h4>Software Engineer and Mentor</h4>
+            <p>Senior enough to design systems end-to-end, and giving back by mentoring students coming up the same way I did.</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <section id="certs" class="wrap block reveal">
-    <div class="block-head">
-      <span class="tag-label">Certificates</span>
-      <h2>Trainings &amp; participation</h2>
-    </div>
-
-    <div class="cert-list">
-      <div class="cert">
-        <div class="cert-badge">DICT</div>
-        <div><h4>Digital Trust in the AI Era: Detecting Deepfakes &amp; Strengthening Cybersecurity</h4><p>Department of Information and Communications Technology — CALABARZON Regional Office</p></div>
-        <div class="cert-date">Jul 22, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">i4R</div>
-        <div><h4>i4Rizal Episode 1: Pro Ads &amp; Precision Reach — Mastering AI Design and Targeting</h4><p>Department of Science and Technology — Rizal, via Zoom</p></div>
-        <div class="cert-date">Jul 8, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">DICT</div>
-        <div><h4>National Disaster Resilience Month 2026 Webinar Series — Build Back Better: Practical Implementation</h4><p>Department of Information and Communications Technology — Region IV-A</p></div>
-        <div class="cert-date">Jul 28, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">DWX</div>
-        <div><h4>Isabela DigiWork eXp 2026 — Digital Careers &amp; Workforce Competitiveness Expositions</h4><p>Province of Isabela, Philippine ICT Innovation Network &amp; partners</p></div>
-        <div class="cert-date">Aug 19, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">CNA</div>
-        <div><h4>Introduction to Modern AI</h4><p>Cisco Networking Academy</p></div>
-        <div class="cert-date">Sep 27, 2026</div>
-      </div>
-      <div class="cert">
-        <div class="cert-badge">CNA</div>
-        <div><h4>Introduction to Data Science</h4><p>Cisco Networking Academy</p></div>
-        <div class="cert-date">Sep 27, 2026</div>
-      </div>
-    </div>
-
-    <p class="gallery-label">// certificate photos - click to enlarge</p>
-    <div class="cert-gallery">
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-deepfakes.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era"></div>
-        <figcaption><b>Digital Trust in the AI Era</b>DICT CALABARZON · Jul 22, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dost-i4rizal.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1"></div>
-        <figcaption><b>i4Rizal Episode 1</b>DOST Rizal · Jul 8, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-dict-disaster-resilience.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026"></div>
-        <figcaption><b>Disaster Resilience Month 2026</b>DICT Region IV-A · Jul 28, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-digiwork-expo.jpg')">
-        <div class="img-wrap"><img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026"></div>
-        <figcaption><b>Isabela DigiWork eXp 2026</b>Province of Isabela · Aug 19, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-modern-ai.png')">
-        <div class="img-wrap"><img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI"></div>
-        <figcaption><b>Introduction to Modern AI</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
-      </figure>
-      <figure class="cert-photo" onclick="openLightbox('certificates/cert-cisco-data-science.png')">
-        <div class="img-wrap"><img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science"></div>
-        <figcaption><b>Introduction to Data Science</b>Cisco Networking Academy · Sep 27, 2026</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section id="contact" class="wrap block reveal">
-    <div class="block-head">
-      <span class="tag-label">Contact</span>
-      <h2>Let's connect</h2>
-    </div>
-    <div class="contact-box">
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <h2>Looking for an OJT or internship</h2>
       <p>Open to on-the-job training, internship, and student developer opportunities around web and software development.</p>
-      <a class="btn btn-primary" href="mailto:hello@example.com">Email me</a>
+      <div class="cta-row">
+        <a class="btn btn-signal" href="mailto:hello@example.com">Email me</a>
+        <a class="btn btn-line" href="https://github.com/SyRiola" target="_blank" rel="noopener">See GitHub</a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap footer-grid">
-    <span>© 2026 Gian Kristopher L. Ariola · North Eastern College, Isabela</span>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>© 2026 Gian Kristopher L. Ariola, North Eastern College, Isabela</span>
     <div class="footer-links">
-      <a href="https://github.com/SyRiola" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://github.com/SyRiola" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:hello@example.com">Email</a>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-  <img id="lightbox-img" src="" alt="Certificate preview">
-</div>
+<dialog class="lightbox" id="lightbox" aria-label="Certificate preview">
+  <div class="lightbox-bar">
+    <p id="lightboxTitle"></p>
+    <form method="dialog">
+      <button class="lightbox-close" aria-label="Close preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </form>
+  </div>
+  <img id="lightboxImg" src="" alt="">
+</dialog>
 
 <script>
-  /* ---- theme toggle, remembers choice ---- */
-  const themeBtn = document.getElementById('themeBtn');
-  const themeKnob = document.getElementById('themeKnob');
-  const root = document.documentElement;
-  function applyTheme(mode){
-    root.setAttribute('data-theme', mode);
-    themeKnob.textContent = mode === 'light' ? '☀️' : '🌙';
-  }
-  let savedTheme = null;
-  try { savedTheme = localStorage.getItem('portfolio-theme'); } catch(e) {}
-  if (savedTheme){
-    applyTheme(savedTheme);
-  } else {
-    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-    applyTheme(prefersLight ? 'light' : 'dark');
-  }
-  themeBtn.addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    applyTheme(next);
-    try { localStorage.setItem('portfolio-theme', next); } catch(e) {}
-  });
-
-  /* ---- mobile nav toggle ---- */
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (navToggle && navLinks){
-    navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  /* ---- terminal typing effect ---- */
-  const lines = [
-    'whoami\n> Gian Kristopher L. Ariola',
-    'cat status.txt\n> 3rd Year, North Eastern College - Isabela',
-    'ls skills/\n> html css js php c++ c# mysql bootstrap jquery modern-ai data-science',
-    './build --project "portfolio"\n> compiling ideas...'
-  ];
-  const typedEl = document.getElementById('typed');
-  let lineIndex = 0, charIndex = 0, deleting = false;
-  function typeLoop(){
-    const full = lines[lineIndex];
-    if (!deleting){
-      charIndex++;
-      typedEl.textContent = full.slice(0, charIndex);
-      if (charIndex === full.length){ deleting = true; setTimeout(typeLoop, 1600); return; }
-      setTimeout(typeLoop, 26);
-    } else {
-      charIndex -= 3;
-      if (charIndex < 0) charIndex = 0;
-      typedEl.textContent = full.slice(0, charIndex);
-      if (charIndex === 0){ deleting = false; lineIndex = (lineIndex + 1) % lines.length; setTimeout(typeLoop, 300); return; }
-      setTimeout(typeLoop, 12);
+  /* ---- theme toggle (remembers choice) ---- */
+  (function(){
+    var root = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    function sync(){
+      var dark = root.getAttribute('data-theme') === 'dark';
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     }
-  }
-  typeLoop();
-
-  /* ---- scroll reveal ---- */
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window){
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => io.observe(el));
-  } else { revealEls.forEach(el => el.classList.add('in-view')); }
-
-  /* ---- animated proficiency bars ---- */
-  const profSection = document.getElementById('skills');
-  let profAnimated = false;
-  function animateProf(){
-    if (profAnimated) return;
-    profAnimated = true;
-    document.querySelectorAll('.prof-fill').forEach(el => {
-      const level = el.getAttribute('data-level');
-      requestAnimationFrame(() => { el.style.width = level + '%'; });
+    sync();
+    btn.addEventListener('click', function(){
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try{ localStorage.setItem('portfolio-theme', next); }catch(e){}
+      sync();
     });
-  }
-  if ('IntersectionObserver' in window && profSection){
-    const profIo = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { animateProf(); profIo.disconnect(); } });
-    }, { threshold: 0.2 });
-    profIo.observe(profSection);
-  } else { animateProf(); }
+  })();
 
-  /* ---- count-up stats ---- */
-  function animateStatBlock(block){
-    block.querySelectorAll('.stat .num').forEach(el => {
-      const target = parseInt(el.getAttribute('data-count'), 10);
-      const duration = 900;
-      const start = performance.now();
-      function step(now){
-        const progress = Math.min((now - start) / duration, 1);
-        el.textContent = Math.round(progress * target);
-        if (progress < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    });
-  }
-  const statsBlocks = document.querySelectorAll('.stats');
-  if ('IntersectionObserver' in window && statsBlocks.length){
-    statsBlocks.forEach(block => {
-      const statsIo = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) { animateStatBlock(block); statsIo.disconnect(); } });
-      }, { threshold: 0.3 });
-      statsIo.observe(block);
-    });
-  } else { statsBlocks.forEach(animateStatBlock); }
+  /* ---- mobile nav ---- */
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('nav');
+    function setOpen(open){
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    toggle.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+  })();
 
   /* ---- certificate lightbox ---- */
-  function openLightbox(src){
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').classList.add('open');
-  }
-  function closeLightbox(e){
-    document.getElementById('lightbox').classList.remove('open');
-  }
+  (function(){
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lightboxImg');
+    var title = document.getElementById('lightboxTitle');
+    document.querySelectorAll('.cert-thumb[data-full]').forEach(function(b){
+      b.addEventListener('click', function(){
+        img.src = b.getAttribute('data-full');
+        img.alt = 'Certificate: ' + b.getAttribute('data-title');
+        title.textContent = b.getAttribute('data-title');
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function(e){ if(e.target === box) box.close(); });
+    box.addEventListener('close', function(){ img.src = ''; });
+  })();
 </script>
 </body>
 </html>
