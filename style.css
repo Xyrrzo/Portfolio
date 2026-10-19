@@ -560,3 +560,6 @@ ul,ol{margin:0; padding:0; list-style:none;}
 .totop.show{opacity:1; transform:none; pointer-events:auto;}
 .totop svg{width:20px; height:20px; stroke:currentColor; stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round;}
 @media (max-width:900px){.glance-grid{grid-template-columns:1fr;} .dots{display:none;}}
+
+/* download resume button icon */
+.btn-dl svg{width:18px; height:18px; margin-right:9px; flex:none; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round;}
