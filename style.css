@@ -563,3 +563,9 @@ ul,ol{margin:0; padding:0; list-style:none;}
 
 /* download resume button icon */
 .btn-dl svg{width:18px; height:18px; margin-right:9px; flex:none; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round;}
+
+/* Microsoft Learn profile strip */
+.ml-profile{margin:0 0 14px;}
+.ml-profile h3{margin:0 0 4px; font:700 21px/1.2 var(--font-display); letter-spacing:-.01em;}
+.ml-profile p{margin:0; color:var(--muted); font-size:15px;}
+.ml-stats{margin-bottom:36px;}
