@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gian Kristopher Ariola | Web and software developer</title>
+<meta name="description" content="Gian Kristopher Ariola, 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. Web and software projects, Dean's Lister, Arduino builder, plus TESDA-certified computer systems servicing.">
+<meta name="theme-color" content="#1741A6">
+<script src="theme-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<button class="totop" id="toTop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<nav class="dots" id="dots" aria-label="Sections"></nav>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="Gian Ariola, back to top">
+      <svg viewBox="0 0 24 20" aria-hidden="true">
+        <rect x="5" y="0" width="14" height="5" rx="1.5" fill="var(--accent)"/>
+        <rect x="2" y="7.5" width="20" height="5" rx="1.5" fill="var(--accent)"/>
+        <rect x="0" y="15" width="24" height="5" rx="1.5" fill="var(--signal)"/>
+      </svg>
+      Gian Ariola
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#certs">Certificates</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <canvas class="hero-fx" id="fx" aria-hidden="true"></canvas>
+    <span class="orb o1" aria-hidden="true"></span><span class="orb o2" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="status rise-in" style="--d:0ms">
+          <img src="assets/avatar.jpg" alt="Gian's GitHub avatar" width="46" height="46">
+          <span class="status-text">Open to OJT and internships</span>
+        </p>
+        <h1><span class="line" style="--n:0"><span>Gian</span></span> <span class="line" style="--n:1"><span>Kristopher</span></span> <span class="line" style="--n:2"><span>L. Ariola</span></span></h1>
+        <p class="role rise-in" style="--d:520ms" aria-label="I build web apps, mobile apps and systems"><span id="typed"></span><i class="caret"></i></p>
+        <p class="lede rise-in" style="--d:620ms">I'm a 3rd year BS Information Technology / Computer Science student at North Eastern College, Isabela. I'm a four-time Dean's Lister. I build websites, apps and Arduino-based devices, and I've trained to set up and maintain the computers, networks and servers they run on.</p>
+        <div class="cta-row rise-in" style="--d:760ms">
+          <a class="btn btn-signal" href="#work">See my work</a>
+          <a class="btn btn-line" href="#certs">View certificates</a>
+          <a class="btn btn-line btn-dl" href="assets/Gian_Ariola_Resume.pdf" download="Gian_Ariola_Resume.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download resume</a>
+        </div>
+      </div>
+
+      <figure class="stack">
+        <ol class="stack-list" aria-label="My skills, from the interface down to the hardware">
+          <li class="layer" style="--w:55%; --i:6"><a class="layer-link" href="#l-interface"><b>Interface</b><span>HTML, CSS, JavaScript, Flutter</span></a></li>
+          <li class="layer" style="--w:62%; --i:5"><a class="layer-link" href="#l-application"><b>Application</b><span>PHP, C#, C++</span></a></li>
+          <li class="layer" style="--w:69%; --i:4"><a class="layer-link" href="#l-frameworks"><b>Frameworks</b><span>React, Laravel, Django</span></a></li>
+          <li class="layer" style="--w:76%; --i:3"><a class="layer-link" href="#l-data"><b>Data</b><span>MySQL, Supabase</span></a></li>
+          <li class="layer is-certified" style="--w:84%; --i:2"><a class="layer-link" href="#l-servers"><b>Servers</b><span>Set up computer servers</span></a></li>
+          <li class="layer is-certified" style="--w:92%; --i:1"><a class="layer-link" href="#l-network"><b>Network</b><span>Set up and maintain networks</span></a></li>
+          <li class="layer is-certified" style="--w:100%; --i:0"><a class="layer-link" href="#l-machines"><b>Machines</b><span>Install, configure and service computers</span></a></li>
+        </ol>
+        <figcaption class="legend">
+          <span><i></i>Coursework and projects</span>
+          <span><i class="cert"></i>TESDA certified, October 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML5</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS3</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">JavaScript</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" onerror="this.style.display='none'">React</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="">jQuery</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" onerror="this.style.display='none'">Laravel</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" onerror="this.style.display='none'">Django</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">C++</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="" onerror="this.style.display='none'">Arduino</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" onerror="this.style.display='none'">Supabase</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git</span>
+        <span class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">GitHub</span>
+    </div>
+  </div>
+
+  <!-- ============ AT A GLANCE ============ -->
+  <section class="section glance" id="glance">
+    <div class="wrap glance-grid">
+      <div class="fx-rise">
+        <span class="eyebrow">At a glance</span>
+        <h2>The quick version</h2>
+        <dl class="g-stats">
+          <div><dd data-n="17">0</dd><dt>Certificates earned</dt></div>
+          <div><dd data-n="5">0</dd><dt>TESDA-certified courses</dt></div>
+          <div><dd data-n="3">0</dd><dt>Flutter apps built</dt></div>
+          <div><dd data-n="17">0</dd><dt>Technologies used</dt></div>
+          <div><dd data-n="4">0</dd><dt>Times Dean's Lister</dt></div>
+          <div><dd data-n="3">0</dd><dt>Ongoing projects</dt></div>
+        </dl>
+      </div>
+      <div class="term fx-rise" id="term" role="img" aria-label="Terminal summary: Gian Kristopher L. Ariola, 3rd year IT/CS student at North Eastern College, Isabela, open to OJT, four-time Dean's Lister, currently building medic-app-v3 in Flutter, and builds Arduino projects. Works with React, Laravel, Django and AI coding tools.">
+        <div class="term-bar"><i></i><i></i><i></i><span>gian@portfolio ~ whoami</span></div>
+        <div class="term-body" aria-hidden="true">
+          <span class="tl" style="--t:0"><span class="p">$</span> whoami</span>
+          <span class="tl" style="--t:1"><span class="v">Gian Kristopher L. Ariola</span></span>
+          <span class="tl" style="--t:2"><span class="p">$</span> cat profile.txt</span>
+          <span class="tl" style="--t:3"><span class="k">school</span>   North Eastern College, Isabela</span>
+          <span class="tl" style="--t:4"><span class="k">level</span>    3rd year BS IT / CS</span>
+          <span class="tl" style="--t:5"><span class="k">honors</span>   Dean's Lister, 4 times</span>
+          <span class="tl" style="--t:6"><span class="k">stack</span>    HTML, CSS, JS, React, PHP, Laravel, Django, C#, C++, MySQL, Supabase, Flutter, Arduino</span>
+          <span class="tl" style="--t:7"><span class="k">certified</span> TESDA, Computer Systems Servicing</span>
+          <span class="tl" style="--t:8"><span class="p">$</span> git log -1 --oneline</span>
+          <span class="tl" style="--t:9"><span class="v">medic-app-v3</span>: cleaner UI, offline storage</span>
+          <span class="tl" style="--t:10"><span class="p">$</span> status</span>
+          <span class="tl" style="--t:11"><span class="v">open to OJT and internships</span><i class="caret"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Skills, from the machine up</h2>
+        <p>Most of my coursework is on the software side. I also trained in computer systems servicing, so I know what the code is running on.</p>
+      </div>
+
+      <div class="layers">
+        <div class="layer-row" id="l-interface">
+          <div class="layer-head">
+            <h3>Interface</h3>
+            <p>What people see and click.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:90%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:85%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">JavaScript</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="">jQuery</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:80%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart (Flutter)</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-application">
+          <div class="layer-head">
+            <h3>Application</h3>
+            <p>The logic behind the screen.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">C++</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#</span><span class="skill-level">Beginner–Intermediate</span><span class="meter" style="--lvl:55%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git and GitHub</span><span class="skill-level">Daily use</span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-frameworks">
+          <div class="layer-head">
+            <h3>Frameworks</h3>
+            <p>The structure I build apps on.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" onerror="this.style.display='none'">React</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" onerror="this.style.display='none'">Laravel</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:72%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" onerror="this.style.display='none'">Django</span><span class="skill-level">Beginner–Intermediate</span><span class="meter" style="--lvl:50%"></span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-data">
+          <div class="layer-head">
+            <h3>Data</h3>
+            <p>Where the information lives.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:75%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" onerror="this.style.display='none'">Supabase</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:60%"></span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified" id="l-servers">
+          <div class="layer-head">
+            <h3>Servers</h3>
+            <p>The machines that host everything.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-servers">Setting Up Computer Servers <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified" id="l-network">
+          <div class="layer-head">
+            <h3>Network</h3>
+            <p>How machines talk to each other.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-networks">Setting Up Computer Networks <small>View certificate</small></a></li>
+            <li><a href="#cert-maintaining">Maintaining Computer Systems and Networks <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row is-certified" id="l-machines">
+          <div class="layer-head">
+            <h3>Machines</h3>
+            <p>The hardware and operating systems underneath.</p>
+            <span class="badge">TESDA certified</span>
+          </div>
+          <ul class="module-list">
+            <li><a href="#cert-installing">Installing and Configuring Computer Systems <small>View certificate</small></a></li>
+            <li><a href="#cert-intro">Introduction to Computer Systems Servicing <small>View certificate</small></a></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-embedded">
+          <div class="layer-head">
+            <h3>Embedded</h3>
+            <p>Code that runs on real hardware.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="" onerror="this.style.display='none'">Arduino</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">Arduino C++ (sketches)</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+            <li class="skill"><span class="skill-name">Sensors, circuits and modules</span><span class="skill-level">Hands-on builds</span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-ai">
+          <div class="layer-head">
+            <h3>AI coding tools</h3>
+            <p>Assistants I build and debug with.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name">Claude Code</span><span class="skill-level">Advanced</span><span class="meter" style="--lvl:85%"></span></li>
+            <li class="skill"><span class="skill-name">Codex</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:70%"></span></li>
+            <li class="skill"><span class="skill-name">Kimi</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:60%"></span></li>
+            <li class="skill"><span class="skill-name">Gemini</span><span class="skill-level">Intermediate</span><span class="meter" style="--lvl:65%"></span></li>
+          </ul>
+        </div>
+
+        <div class="layer-row" id="l-learning">
+          <div class="layer-head">
+            <h3>Still learning</h3>
+            <p>Newer topics, with Cisco and Microsoft Learn credentials behind them.</p>
+          </div>
+          <ul class="skill-list">
+            <li class="skill"><span class="skill-name">Modern AI</span><span class="skill-level">Beginner</span><span class="meter" style="--lvl:40%"></span></li>
+            <li class="skill"><span class="skill-name">Data Science</span><span class="skill-level">Beginner</span><span class="meter" style="--lvl:40%"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What I've shipped and what's on GitHub</h2>
+        <p>Course finals, side projects, and a few apps I keep improving between semesters.</p>
+      </div>
+
+      <div class="gh">
+        <img src="assets/avatar.jpg" alt="GitHub avatar for SyRiola" width="64" height="64">
+        <div>
+          <div class="gh-name">SyRiola</div>
+          <div class="gh-handle">@SyRiola, he/him</div>
+        </div>
+        <a class="btn btn-outline" href="https://github.com/SyRiola" target="_blank" rel="noopener">View GitHub profile</a>
+      </div>
+      <dl class="gh-stats">
+        <div><dt>Repositories</dt><dd data-count="59">59</dd></div>
+        <div><dt>Followers</dt><dd data-count="1334574">1,334,574</dd></div>
+        <div><dt>Following</dt><dd data-count="13">13</dd></div>
+        <div><dt>Contributions</dt><dd data-count="3668">3,668</dd></div>
+      </dl>
+
+      <div class="subhead spaced">
+        <h3>Repositories</h3>
+        <p>A few things I keep pushed up to GitHub</p>
+      </div>
+      <div class="repo-list">
+        <a class="repo" href="https://github.com/SyRiola/mvc_hotel" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">mvc_hotel</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">A hotel reservation and management framework built with the MVC pattern for our Web Development, Database Management, and Networking finals. It handles room bookings, guest check-in/out, staff accounts, and a billing module with receipt generation.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="">PHP</span>
+            <span>★ 24,564</span>
+            <span>Updated 3 months ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/CIT-web-Development-" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">CIT-web-Development-</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Layout and styling exercises from the CIT Web Development course: responsive grids, flexbox layouts, and a handful of themed landing page mockups built while learning the fundamentals.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</span>
+            <span>★ 175,686</span>
+            <span>Updated 5 months ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/Food-app" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">Food-app</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">A Flutter food ordering app with a browsable menu, cart and checkout flow, and order-status tracking. Built to get more comfortable with state management and hooking a front end up to an API.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 25,678</span>
+            <span>Updated 1 month ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/MedicAppV2" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">MedicAppV2</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Second version of a Flutter medical app for patients of all ages: appointment booking, medicine reminders, and a simple patient records view, with a redesigned onboarding flow over the first draft.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 36,578</span>
+            <span>Updated 2 weeks ago</span>
+          </div>
+        </a>
+        <a class="repo" href="https://github.com/SyRiola/medic-app-v3" target="_blank" rel="noopener">
+          <div>
+            <div class="repo-title"><span class="repo-name">medic-app-v3</span><span class="repo-vis">Public</span></div>
+            <p class="repo-desc">Latest iteration of the medical app, rebuilt with a cleaner UI, offline-friendly local storage, and smoother appointment-scheduling logic. An ongoing side project between semesters.</p>
+          </div>
+          <div class="repo-meta">
+            <span class="repo-lang"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">Dart</span>
+            <span>★ 15,678</span>
+            <span>Updated this week</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="subhead spaced">
+        <h3>Ongoing projects</h3>
+        <p>Still being built, updated every few weeks</p>
+      </div>
+      <!-- TODO: medic-app-v3 is real. The other two are sample placeholders, replace with your actual ongoing work. -->
+      <div class="project-grid">
+        <article class="project">
+          <p class="project-kind">Ongoing <span class="pill">In progress</span></p>
+          <h4>medic-app-v3</h4>
+          <p>The third iteration of my Flutter medical app: cleaner UI, offline-friendly local storage and smarter appointment scheduling.</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Supabase</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Ongoing <span class="pill">In progress</span></p>
+          <h4>Smart Hotel Dashboard</h4>
+          <p>Extending my MVC hotel system with a live occupancy dashboard and reports for staff.</p>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">MySQL</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Ongoing <span class="pill">Prototype</span></p>
+          <h4>Arduino Monitoring Node</h4>
+          <p>A sensor node that logs readings and will push them to a web dashboard.</p>
+          <div class="chips"><span class="chip">Arduino</span><span class="chip">C++</span><span class="chip">JavaScript</span></div>
+        </article>
+      </div>
+
+      <div class="subhead spaced">
+        <h3>Arduino technologies I developed</h3>
+        <p>Hardware projects where code meets circuits</p>
+      </div>
+      <!-- TODO: these three are sample placeholders. Replace titles, descriptions and components with your real Arduino builds. -->
+      <div class="project-grid">
+        <article class="project">
+          <p class="project-kind">Arduino build</p>
+          <h4>Automatic Control System</h4>
+          <p>A microcontroller circuit that reads a sensor and switches a relay or motor automatically based on set thresholds.</p>
+          <div class="chips"><span class="chip">Arduino Uno</span><span class="chip">Sensors</span><span class="chip">Relay</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Arduino build</p>
+          <h4>Security and Alert Device</h4>
+          <p>A motion-triggered device with a buzzer and LED alerts, built to practice input handling and timing.</p>
+          <div class="chips"><span class="chip">Arduino</span><span class="chip">PIR sensor</span><span class="chip">Buzzer</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Arduino build</p>
+          <h4>Display and Data Logger</h4>
+          <p>Shows live readings on an LCD and stores them for later review.</p>
+          <div class="chips"><span class="chip">Arduino</span><span class="chip">LCD</span><span class="chip">C++</span></div>
+        </article>
+      </div>
+
+      <div class="subhead spaced">
+        <h3>Coursework and practice projects</h3>
+      </div>
+      <!-- TODO: these six are still sample placeholders. Swap in your real projects. -->
+      <div class="project-grid">
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Campus Event Tracker</h4>
+          <p>A small web app where students browse upcoming school events and RSVP, with an admin panel to post new listings.</p>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Personal project</p>
+          <h4>Grade Analyzer</h4>
+          <p>A C# desktop tool that computes GWA and charts grade trends per semester to help plan course loads.</p>
+          <div class="chips"><span class="chip">C#</span><span class="chip">MySQL</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Library Queue System</h4>
+          <p>A lightweight reservation queue for shared library computers, with live slot updates on the page.</p>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">PHP</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Practice project</p>
+          <h4>Inventory CLI</h4>
+          <p>A console-based inventory manager built to practice data structures, file handling, and menu-driven logic.</p>
+          <div class="chips"><span class="chip">C++</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Personal project</p>
+          <h4>Study Planner</h4>
+          <p>A to-do and scheduling page for organizing deadlines by subject, with local progress tracking.</p>
+          <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+        </article>
+        <article class="project">
+          <p class="project-kind">Coursework project</p>
+          <h4>Simple POS System</h4>
+          <p>A point-of-sale mockup for a school canteen stall, covering orders, receipts, and a basic sales log.</p>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section id="certs" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Certificates</h2>
+        <p>Seventeen so far: five TESDA courses in computer systems servicing, plus twelve trainings, short courses and Microsoft Learn modules. Select any certificate to enlarge it, then use the arrow keys to move through them all.</p>
+      </div>
+
+      <div class="ml-profile">
+        <h3>Microsoft Learn</h3>
+        <p>Profile totals as of Oct 2026. A selection of the achievements is shown below.</p>
+      </div>
+      <dl class="gh-stats ml-stats">
+        <div><dt>Badges</dt><dd data-count="36">36</dd></div>
+        <div><dt>Trophies</dt><dd data-count="7">7</dd></div>
+        <div><dt>Level</dt><dd data-count="8">8</dd></div>
+        <div><dt>XP earned</dt><dd data-count="52925">52,925</dd></div>
+      </dl>
+
+      <div class="filters" role="group" aria-label="Filter certificates">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span>17</span></button>
+        <button class="filter" type="button" data-filter="tesda" aria-pressed="false">TESDA <span>5</span></button>
+        <button class="filter" type="button" data-filter="training" aria-pressed="false">Trainings and short courses <span>12</span></button>
+      </div>
+
+      <ul class="cert-grid" id="certGrid">
+        <li class="cert-card" id="cert-intro" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-intro-computer-systems-servicing.jpg" data-title="Introduction to Computer Systems Servicing" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Introduction to Computer Systems Servicing">
+            <img src="certificates/tesda-intro-computer-systems-servicing.jpg" alt="Certificate: Introduction to Computer Systems Servicing" width="1677" height="1186" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Introduction to Computer Systems Servicing</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-installing" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-installing-configuring-computer-systems.jpg" data-title="Installing and Configuring Computer Systems" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Installing and Configuring Computer Systems">
+            <img src="certificates/tesda-installing-configuring-computer-systems.jpg" alt="Certificate: Installing and Configuring Computer Systems" width="1680" height="1183" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Installing and Configuring Computer Systems</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-maintaining" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-maintaining-computer-systems-networks.jpg" data-title="Maintaining Computer Systems and Networks" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Maintaining Computer Systems and Networks">
+            <img src="certificates/tesda-maintaining-computer-systems-networks.jpg" alt="Certificate: Maintaining Computer Systems and Networks" width="1662" height="1185" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Maintaining Computer Systems and Networks</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-networks" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-networks.jpg" data-title="Setting Up Computer Networks" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Setting Up Computer Networks">
+            <img src="certificates/tesda-setting-up-computer-networks.jpg" alt="Certificate: Setting Up Computer Networks" width="1671" height="1180" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Setting Up Computer Networks</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-servers" data-group="tesda">
+          <button class="cert-thumb" type="button" data-full="certificates/tesda-setting-up-computer-servers.jpg" data-title="Setting Up Computer Servers" data-meta="TESDA Online Program, Oct 11, 2026" aria-label="Enlarge certificate: Setting Up Computer Servers">
+            <img src="certificates/tesda-setting-up-computer-servers.jpg" alt="Certificate: Setting Up Computer Servers" width="1666" height="1180" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Setting Up Computer Servers</h4>
+          <p>TESDA Online Program, <time datetime="2026-10-11">Oct 11, 2026</time></p>
+        </li>
+        <li class="verify" data-group="tesda">
+          <h4>Want to verify the TESDA ones?</h4>
+          <p>Each TESDA certificate carries its own code and is valid without a signature. Verification goes through the eTESDA Division.</p>
+          <p><a href="mailto:tesdaonlineprogram@tesda.gov.ph">tesdaonlineprogram@tesda.gov.ph</a></p>
+          <p><a href="tel:+63288938297">(02) 8893-8297</a></p>
+        </li>
+        <li class="cert-card" id="cert-ms-ai-business" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-ai-business-productivity.png" data-title="Architect AI solutions for business productivity" data-meta="Microsoft Learn, all module assessments passed, Oct 2026" aria-label="Enlarge achievement: Architect AI solutions for business productivity">
+            <img src="certificates/ms-learn-ai-business-productivity.png" alt="Microsoft Learn trophy: Architect AI solutions for business productivity, all module assessments passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Architect AI solutions for business productivity</h4>
+          <p>Microsoft Learn trophy, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-ms-responsible-ai" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-responsible-ai.png" data-title="Design responsible AI security, governance, risk management, and compliance" data-meta="Microsoft Learn, module assessment passed, Oct 2026" aria-label="Enlarge achievement: Design responsible AI security, governance, risk management, and compliance">
+            <img src="certificates/ms-learn-responsible-ai.png" alt="Microsoft Learn module: Design responsible AI security, governance, risk management, and compliance, module assessment passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Design responsible AI security, governance, risk management, and compliance</h4>
+          <p>Microsoft Learn module, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-ms-ps-start" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-powershell-get-started.png" data-title="Get started with Windows PowerShell" data-meta="Microsoft Learn, all module assessments passed, Oct 2026" aria-label="Enlarge achievement: Get started with Windows PowerShell">
+            <img src="certificates/ms-learn-powershell-get-started.png" alt="Microsoft Learn trophy: Get started with Windows PowerShell, all module assessments passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Get started with Windows PowerShell</h4>
+          <p>Microsoft Learn trophy, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-ms-ps-help" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-powershell-get-help.png" data-title="Find commands and Get-Help in Windows PowerShell" data-meta="Microsoft Learn, module assessment passed, Oct 2026" aria-label="Enlarge achievement: Find commands and Get-Help in Windows PowerShell">
+            <img src="certificates/ms-learn-powershell-get-help.png" alt="Microsoft Learn module: Find commands and Get-Help in Windows PowerShell, module assessment passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Find commands and Get-Help in Windows PowerShell</h4>
+          <p>Microsoft Learn module, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-ms-security-copilot" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-security-copilot.png" data-title="Describe Microsoft Security Copilot" data-meta="Microsoft Learn, module assessment passed, Oct 2026" aria-label="Enlarge achievement: Describe Microsoft Security Copilot">
+            <img src="certificates/ms-learn-security-copilot.png" alt="Microsoft Learn achievement: Describe Microsoft Security Copilot, module assessment passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Describe Microsoft Security Copilot</h4>
+          <p>Microsoft Learn module, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-ms-ai-concepts" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/ms-learn-ai-concepts.png" data-title="Introduction to AI concepts" data-meta="Microsoft Learn, module assessment passed, Oct 2026" aria-label="Enlarge achievement: Introduction to AI concepts">
+            <img src="certificates/ms-learn-ai-concepts.png" alt="Microsoft Learn achievement: Introduction to AI concepts, module assessment passed" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Introduction to AI concepts</h4>
+          <p>Microsoft Learn module, <time datetime="2026-10">Oct 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-cisco-ai" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-modern-ai.png" data-title="Introduction to Modern AI" data-meta="Cisco Networking Academy, Sep 27, 2026" aria-label="Enlarge certificate: Introduction to Modern AI">
+            <img src="certificates/cert-cisco-modern-ai.png" alt="Certificate: Introduction to Modern AI" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Introduction to Modern AI</h4>
+          <p>Cisco Networking Academy, <time datetime="2026-09-27">Sep 27, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-cisco-ds" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-cisco-data-science.png" data-title="Introduction to Data Science" data-meta="Cisco Networking Academy, Sep 27, 2026" aria-label="Enlarge certificate: Introduction to Data Science">
+            <img src="certificates/cert-cisco-data-science.png" alt="Certificate: Introduction to Data Science" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Introduction to Data Science</h4>
+          <p>Cisco Networking Academy, <time datetime="2026-09-27">Sep 27, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-digiwork" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-digiwork-expo.jpg" data-title="Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions" data-meta="Province of Isabela, Philippine ICT Innovation Network and partners, Aug 19, 2026" aria-label="Enlarge certificate: Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions">
+            <img src="certificates/cert-digiwork-expo.jpg" alt="Certificate: Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Isabela DigiWork eXp 2026: Digital Careers and Workforce Competitiveness Expositions</h4>
+          <p>Province of Isabela, Philippine ICT Innovation Network and partners, <time datetime="2026-08-19">Aug 19, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-disaster" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-disaster-resilience.jpg" data-title="National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation" data-meta="DICT, Region IV-A, Jul 28, 2026" aria-label="Enlarge certificate: National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation">
+            <img src="certificates/cert-dict-disaster-resilience.jpg" alt="Certificate: National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>National Disaster Resilience Month 2026 Webinar Series: Build Back Better, Practical Implementation</h4>
+          <p>DICT, Region IV-A, <time datetime="2026-07-28">Jul 28, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-deepfakes" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dict-deepfakes.jpg" data-title="Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity" data-meta="DICT, CALABARZON Regional Office, Jul 22, 2026" aria-label="Enlarge certificate: Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity">
+            <img src="certificates/cert-dict-deepfakes.jpg" alt="Certificate: Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity</h4>
+          <p>DICT, CALABARZON Regional Office, <time datetime="2026-07-22">Jul 22, 2026</time></p>
+        </li>
+        <li class="cert-card" id="cert-i4rizal" data-group="training">
+          <button class="cert-thumb" type="button" data-full="certificates/cert-dost-i4rizal.jpg" data-title="i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting" data-meta="DOST Rizal (via Zoom), Jul 8, 2026" aria-label="Enlarge certificate: i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting">
+            <img src="certificates/cert-dost-i4rizal.jpg" alt="Certificate: i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting" loading="lazy"><span class="glare" aria-hidden="true"></span>
+          </button>
+          <h4>i4Rizal Episode 1: Pro Ads and Precision Reach, Mastering AI Design and Targeting</h4>
+          <p>DOST Rizal (via Zoom), <time datetime="2026-07-08">Jul 8, 2026</time></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section id="story" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What drives me</h2>
+        <p>Where I'm headed, and why I keep showing up to ICT events.</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="prose">
+          <p>I like turning a vague idea into something you can actually click through. That's most of the appeal of programming for me. I'm drawn to projects that fix a specific, real annoyance: a queue that's actually fair, a records app that doesn't make a patient dig through five menus just to book a check-up.</p>
+          <p>Outside of class I keep showing up to ICT and cybersecurity talks run by DICT, DOST, and local provincial offices. Not because I have to, but because I want a running sense of where the industry is heading before I graduate into it. AI, digital trust, and secure systems are the topics I keep gravitating back to.</p>
+          <p>The TESDA courses added the other half: knowing how to install, configure and maintain the systems that software actually runs on.</p>
+          <blockquote class="pullquote">Build the thing you wish already existed.</blockquote>
+        </div>
+        <dl class="facts">
+          <div><dt>School</dt><dd>North Eastern College, Isabela</dd></div>
+          <div><dt>Level</dt><dd>3rd Year Student</dd></div>
+          <div><dt>Honors</dt><dd>Dean's Lister, 4 times</dd></div>
+          <div><dt>Focus</dt><dd>Web, software and Arduino hardware</dd></div>
+          <div><dt>Based in</dt><dd>Isabela, Philippines</dd></div>
+        </dl>
+      </div>
+
+      <div class="build">
+        <div class="subhead"><h3>Things I'd love to build</h3></div>
+        <ul class="build-list">
+          <li>A service app for my hometown barangay</li>
+          <li>A contribution to an open-source security tool</li>
+          <li>My own small dev studio, someday</li>
+          <li>A mentoring track for incoming NEC students</li>
+        </ul>
+      </div>
+
+      <div class="build">
+        <div class="subhead"><h3>Career track</h3></div>
+        <ol class="timeline">
+          <li class="step">
+            <span class="step-stage">Now</span>
+            <h4>Student Developer</h4>
+            <p>Finishing coursework at NEC, shipping small full-stack projects, and picking up new frameworks outside of class.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Next</span>
+            <h4>OJT / Internship</h4>
+            <p>Looking for on-the-job training or an internship in web or software development, ideally on something real people use.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Then</span>
+            <h4>Junior Full-Stack Developer</h4>
+            <p>Growing into a junior dev role, ideally somewhere that also touches backend systems and security.</p>
+          </li>
+          <li class="step">
+            <span class="step-stage">Someday</span>
+            <h4>Software Engineer and Mentor</h4>
+            <p>Senior enough to design systems end-to-end, and giving back by mentoring students coming up the same way I did.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <h2>Looking for an <em>OJT or internship</em></h2>
+      <p>Open to on-the-job training, internship, and student developer opportunities around web and software development.</p>
+      <div class="cta-row">
+        <a class="btn btn-signal" href="mailto:hello@example.com">Email me</a>
+        <a class="btn btn-line btn-dl" href="assets/Gian_Ariola_Resume.pdf" download="Gian_Ariola_Resume.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download resume</a>
+        <a class="btn btn-line" href="https://github.com/SyRiola" target="_blank" rel="noopener">See GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>© 2026 Gian Kristopher L. Ariola, North Eastern College, Isabela</span>
+    <div class="footer-links">
+      <a href="https://github.com/SyRiola" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:hello@example.com">Email</a>
+      <a href="assets/Gian_Ariola_Resume.pdf" download="Gian_Ariola_Resume.pdf">Resume (PDF)</a>
+      <a href="assets/Gian_Ariola_Resume.docx" download="Gian_Ariola_Resume.docx">Resume (Word)</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Certificate viewer">
+  <div class="lightbox-bar">
+    <div class="lb-text">
+      <p id="lbTitle"></p>
+      <p class="lb-meta" id="lbMeta"></p>
+    </div>
+    <span class="lb-count" id="lbCount" aria-live="polite"></span>
+    <form method="dialog">
+      <button class="lightbox-close" aria-label="Close viewer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </form>
+  </div>
+  <div class="lightbox-stage">
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous certificate">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next certificate">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
