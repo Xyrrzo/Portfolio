@@ -569,3 +569,7 @@ ul,ol{margin:0; padding:0; list-style:none;}
 .ml-profile h3{margin:0 0 4px; font:700 21px/1.2 var(--font-display); letter-spacing:-.01em;}
 .ml-profile p{margin:0; color:var(--muted); font-size:15px;}
 .ml-stats{margin-bottom:36px;}
+
+/* status pill on ongoing projects */
+.pill{display:inline-block; margin-left:8px; padding:2px 9px; border-radius:999px; background:var(--signal); color:#111; font-size:12px; font-weight:700; letter-spacing:.02em; vertical-align:1px;}
+.project-grid + .subhead.spaced{margin-top:80px;}
